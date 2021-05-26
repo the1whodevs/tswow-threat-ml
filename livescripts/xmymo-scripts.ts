@@ -58,13 +58,23 @@ export function Main(events: TSEventHandlers)
         }
     )
 
-    // events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>
-    //     {
-    //         if (value.get() == 0.0) return;
+    // Owner is the mob, target is the player.
+    events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>
+        {
+            if (value.get() == 0.0) return;
 
-    //         owner.SendUnitSay("[EARLY] Threat towards: " + target.GetName() + " = " + value.get(), 0);
-    //     }
-    // )
+            // Id of boss: 1696
+            if (owner.ToCreature().GetEntry() == 1696)
+            {
+                /*
+                This does set added threat to 0 BUT last attacked player
+                will still be attacked unless the mob is reset!
+                */
+                value.set(0);
+                owner.ScaleThreat(target, 0, true);
+            }
+        }
+    )
 
     
     // events.Formula.OnAddThreatLate((owner,target,spell,israw,value)=>
