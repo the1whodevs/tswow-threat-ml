@@ -26,6 +26,128 @@ class TeleportData
     }
 }
 
+class ML_Entry
+{
+    class_id:int;
+    dmg_dealt:int;
+    stat_3:int; // extra agi from items
+    stat_4:int; // extra str from items
+    stat_5:int; // extra int from items
+    stat_6:int; // extra spi from items
+    stat_7:int; // extra sta from items
+    stat_12:int; // extra def rating from items
+    stat_13:int; // extra dodge rating from items
+    stat_14:int; // extra parry rating from items
+    stat_15:int; // extra block rating from items
+    stat_31:int; // extra hit rating from items
+    stat_32:int; // extra crit rating from items
+    stat_33:int; // extra hit taken from items
+    stat_34:int; // extra crit taken from items
+    stat_38:int; // extra attack power from items
+    stat_39:int; // extra ranged attack power from items
+    stat_41:int; // extra spell healing done from items
+    stat_42:int; // extra spell damage done from items
+    stat_44:int; // extra armor penetration rating from items
+    stat_45:int; // extra spell power from items
+    stat_46:int; // extra health regen from items
+    stat_47:int; // extra spell penetration from items
+    stat_48:int; // extra block value from items
+    threat:int; // (1 dmg = 1 threat)
+
+    constructor(class_id:int,
+        dmg_dealt:int,
+        stat_3:int,
+        stat_4:int,
+        stat_5:int,
+        stat_6:int,
+        stat_7:int,
+        stat_12:int,
+        stat_13:int,
+        stat_14:int,
+        stat_15:int,
+        stat_31:int,
+        stat_32:int,
+        stat_33:int,
+        stat_34:int,
+        stat_38:int,
+        stat_39:int,
+        stat_41:int,
+        stat_42:int,
+        stat_44:int,
+        stat_45:int,
+        stat_46:int,
+        stat_47:int,
+        stat_48:int,
+        threat:int)
+    {
+        this.class_id  = class_id;
+        this.dmg_dealt = dmg_dealt;
+        this.stat_3 = stat_3;
+        this.stat_4 = stat_4;
+        this.stat_5 = stat_5;
+        this.stat_6 = stat_6;
+        this.stat_7 = stat_7;
+        this.stat_12 = stat_12;
+        this.stat_13 = stat_13;
+        this.stat_14 = stat_14;
+        this.stat_15 = stat_15;
+        this.stat_31 = stat_31;
+        this.stat_32 = stat_32;
+        this.stat_33 = stat_33;
+        this.stat_34 = stat_34;
+        this.stat_38 = stat_38;
+        this.stat_39 = stat_39;
+        this.stat_41 = stat_41;
+        this.stat_42 = stat_42;
+        this.stat_44 = stat_44;
+        this.stat_45 = stat_45;
+        this.stat_46 = stat_46;
+        this.stat_47 = stat_47;
+        this.stat_48 = stat_48;
+        this.threat = threat;
+    }
+}
+
+class ML_Data
+{
+    entries:Array<ML_Entry> = new Array<ML_Entry>();
+
+    public AddEntry(player:TSPlayer, dmg:TSMutable<number>) 
+    {
+        this.entries.push(
+            new ML_Entry(
+                player.GetClass(),
+                dmg.get(),
+                player.GetStat(3),
+                player.GetStat(4),
+                player.GetStat(5),
+                player.GetStat(6),
+                player.GetStat(7),
+                player.GetStat(12),
+                player.GetStat(13),
+                player.GetStat(14),
+                player.GetStat(15),
+                player.GetStat(31),
+                player.GetStat(32),
+                player.GetStat(33),
+                player.GetStat(34),
+                player.GetStat(38),
+                player.GetStat(39),
+                player.GetStat(41),
+                player.GetStat(42),
+                player.GetStat(44),
+                player.GetStat(45),
+                player.GetStat(46),
+                player.GetStat(47),
+                player.GetStat(48),
+                dmg.get()
+                ))
+    }
+}
+
+// TODO: Append data to dataset file every Interval and reset variables.
+const data:ML_Data = new ML_Data();
+
 //Pos(0,-8824.375000,800.609314,97.657875,0.497085),
 const STORMWIND_STOCKADES_TP:TeleportData = new TeleportData(
     0,
@@ -33,6 +155,8 @@ const STORMWIND_STOCKADES_TP:TeleportData = new TeleportData(
     800.609314,
     97.657875,
     0.497085)
+
+const BOSS_ID:int = 1696;
 
 // Register your events here!
 export function Main(events: TSEventHandlers) 
@@ -58,13 +182,31 @@ export function Main(events: TSEventHandlers)
         }
     )
 
+    events.Formula.OnMeleeDamageEarly((dmgInfo, typeId, id, dmg) =>
+        {
+            if (!dmgInfo.GetAttacker().IsPlayer()) return;
+            if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
+
+            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg);
+        })
+        
+    
+    events.Formula.OnSpellDamageEarly((dmgInfo, spell, typeId, isCrit, dmg) =>
+        {
+            if (!dmgInfo.GetAttacker().IsPlayer()) return;
+            if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
+
+            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg);
+        })
+
+
     // Owner is the mob, target is the player.
     events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>
         {
             if (value.get() == 0.0) return;
 
-            // Id of boss: 1696
-            if (owner.ToCreature().GetEntry() == 1696)
+            // TODO: Add threat based on data for given class (last entry)
+            if (IsBoss(owner.ToCreature().GetEntry()))
             {
                 /*
                 This does set added threat to 0 BUT last attacked player
@@ -72,9 +214,19 @@ export function Main(events: TSEventHandlers)
                 */
                 value.set(0);
                 owner.ScaleThreat(target, 0, true);
+
+                /*
+                Use target.ToPlayer().GetClass() to read from the ml_data var,
+                and calculate threat
+                */
             }
         }
     )
+
+    function IsBoss(id:int):bool
+    {
+        return id == BOSS_ID;
+    } 
 
     
     // events.Formula.OnAddThreatLate((owner,target,spell,israw,value)=>
