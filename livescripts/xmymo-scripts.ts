@@ -141,7 +141,12 @@ class ML_Data
                 player.GetStat(47),
                 player.GetStat(48),
                 dmg.get()
-                ))
+                ));
+    }
+
+    public GetLastEntry():ML_Entry
+    {
+        return this.entries.get(this.entries.length-1);
     }
 }
 
@@ -188,6 +193,14 @@ export function Main(events: TSEventHandlers)
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
             data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg);
+            dmgInfo.GetTarget().AddThreat(
+                dmgInfo.GetAttacker().ToPlayer(), 
+                dmg.get(), 
+                undefined, 
+                undefined, 
+                undefined, 
+                undefined,  
+                true);
         })
         
     
@@ -197,15 +210,23 @@ export function Main(events: TSEventHandlers)
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
             data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg);
+            dmgInfo.GetTarget().AddThreat(
+                dmgInfo.GetAttacker().ToPlayer(), 
+                dmg.get(), 
+                undefined, 
+                undefined, 
+                undefined, 
+                undefined,  
+                true);
         })
 
 
     // Owner is the mob, target is the player.
     events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>
         {
+            if (isRaw) return;
             if (value.get() == 0.0) return;
 
-            // TODO: Add threat based on data for given class (last entry)
             if (IsBoss(owner.ToCreature().GetEntry()))
             {
                 /*
