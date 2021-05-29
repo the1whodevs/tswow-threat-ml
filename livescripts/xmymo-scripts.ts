@@ -110,14 +110,14 @@ class ML_Entry
 
 class ML_Data
 {
-    entries:Array<ML_Entry> = new Array<ML_Entry>();
+    entries:TSArray<ML_Entry> = [];
 
-    public AddEntry(player:TSPlayer, dmg:TSMutable<number>) 
+    public AddEntry(player:TSPlayer, dmg:number) 
     {
         this.entries.push(
             new ML_Entry(
                 player.GetClass(),
-                dmg.get(),
+                dmg,
                 player.GetStat(3),
                 player.GetStat(4),
                 player.GetStat(5),
@@ -140,7 +140,7 @@ class ML_Data
                 player.GetStat(46),
                 player.GetStat(47),
                 player.GetStat(48),
-                dmg.get()
+                dmg
                 ));
     }
 
@@ -162,6 +162,11 @@ const STORMWIND_STOCKADES_TP:TeleportData = new TeleportData(
     0.497085)
 
 const BOSS_ID:int = 1696;
+
+function IsBoss(id:int):bool
+{
+    return id == BOSS_ID;
+} 
 
 // Register your events here!
 export function Main(events: TSEventHandlers) 
@@ -189,43 +194,44 @@ export function Main(events: TSEventHandlers)
 
     events.Formula.OnMeleeDamageEarly((dmgInfo, typeId, id, dmg) =>
         {
+            if (dmg.get() == 0) return;
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg);
+            dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OMDE) Adding entry with threat : " + dmg.get(), 0);
+
+            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
             dmgInfo.GetTarget().AddThreat(
                 dmgInfo.GetAttacker().ToPlayer(), 
-                dmg.get(), 
-                undefined, 
-                undefined, 
-                undefined, 
-                undefined,  
-                true);
+                dmg.get(), 0, 0, false, false, true);
         })
         
     
     events.Formula.OnSpellDamageEarly((dmgInfo, spell, typeId, isCrit, dmg) =>
         {
+            if (dmg.get() == 0) return;
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg);
+            dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OSDE) Adding entry with threat : " + dmg.get(), 0);
+
+            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
             dmgInfo.GetTarget().AddThreat(
                 dmgInfo.GetAttacker().ToPlayer(), 
-                dmg.get(), 
-                undefined, 
-                undefined, 
-                undefined, 
-                undefined,  
-                true);
+                dmg.get(), 0, 0, false, false, true);
         })
 
 
     // Owner is the mob, target is the player.
     events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>
         {
-            if (isRaw) return;
             if (value.get() == 0.0) return;
+
+            if (isRaw)
+            {
+                target.SendUnitSay("AddThreatEarly! Owner : " + owner.GetName() + " Target : " + target.GetName() + " Threat : " + value.get(), 0);
+                return;
+            } 
 
             if (IsBoss(owner.ToCreature().GetEntry()))
             {
@@ -243,11 +249,6 @@ export function Main(events: TSEventHandlers)
             }
         }
     )
-
-    function IsBoss(id:int):bool
-    {
-        return id == BOSS_ID;
-    } 
 
     
     // events.Formula.OnAddThreatLate((owner,target,spell,israw,value)=>
