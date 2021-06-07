@@ -1,3 +1,4 @@
+import { writeFile } from "node:fs";
 import { eventNames } from "node:process";
 
 const COMMAND_PREFIX = "-";
@@ -112,6 +113,11 @@ class ML_Data
 {
     entries:TSArray<ML_Entry> = [];
 
+    public ResetEntries()
+    {
+        this.entries = <TSArray<ML_Entry>> [];    
+    }
+
     public AddEntry(player:TSPlayer, dmg:number) 
     {
         this.entries.push(
@@ -144,13 +150,48 @@ class ML_Data
                 ));
     }
 
+    public GetString():string
+    {
+        let dump = ""
+
+        for (let entry of this.entries)
+        {
+            dump += entry.class_id + "," +
+            entry.dmg_dealt + "," +
+            entry.stat_3 + "," +
+            entry.stat_4 + "," +
+            entry.stat_5 + "," +
+            entry.stat_6 + "," +
+            entry.stat_7 + "," +
+            entry.stat_12 + "," +
+            entry.stat_13 + "," +
+            entry.stat_14 + "," +
+            entry.stat_15 + "," +
+            entry.stat_31 + "," +
+            entry.stat_32 + "," +
+            entry.stat_33 + "," +
+            entry.stat_34 + "," +
+            entry.stat_38 + "," +
+            entry.stat_39 + "," +
+            entry.stat_41 + "," +
+            entry.stat_42 + "," +
+            entry.stat_44 + "," +
+            entry.stat_45 + "," +
+            entry.stat_46 + "," +
+            entry.stat_47 + "," +
+            entry.stat_48 + "," +
+            entry.threat + ";"
+        }
+
+        return dump;
+    }
+
     public GetLastEntry():ML_Entry
     {
         return this.entries.get(this.entries.length-1);
     }
 }
 
-// TODO: Append data to dataset file every Interval and reset variables.
 const data:ML_Data = new ML_Data();
 
 //Pos(0,-8824.375000,800.609314,97.657875,0.497085),
@@ -198,7 +239,7 @@ export function Main(events: TSEventHandlers)
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OMDE) Adding entry with threat : " + dmg.get(), 0);
+            // dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OMDE) Adding entry with threat : " + dmg.get(), 0);
 
             data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
             dmgInfo.GetTarget().AddThreat(
@@ -213,7 +254,7 @@ export function Main(events: TSEventHandlers)
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OSDE) Adding entry with threat : " + dmg.get(), 0);
+            // dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OSDE) Adding entry with threat : " + dmg.get(), 0);
 
             data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
             dmgInfo.GetTarget().AddThreat(
@@ -222,6 +263,13 @@ export function Main(events: TSEventHandlers)
         })
 
 
+    // Fires when the given npc id dies.
+    events.CreatureID.OnDeath(BOSS_ID, (creature, killer) => 
+        {
+            killer.SendUnitSay("Killed the boss, dumping data...", 0);
+            WriteFile("data", data.GetString());
+        })
+
     // Owner is the mob, target is the player.
     events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>
         {
@@ -229,7 +277,7 @@ export function Main(events: TSEventHandlers)
 
             if (isRaw)
             {
-                target.SendUnitSay("AddThreatEarly! Owner : " + owner.GetName() + " Target : " + target.GetName() + " Threat : " + value.get(), 0);
+                // target.SendUnitSay("AddThreatEarly! Owner : " + owner.GetName() + " Target : " + target.GetName() + " Threat : " + value.get(), 0);
                 return;
             } 
 
