@@ -242,7 +242,14 @@ const BOSS_ID:int = 1696;
 function IsBoss(id:int):bool
 {
     return id == BOSS_ID;
-} 
+}
+
+function AddItem(player:TSPlayer, id:int, slot:int, equip:boolean)
+{
+    var item = player.AddItem(id, 1);
+
+    if (equip) player.EquipItem(item, slot, id);
+}
 
 // Register your events here!
 export function Main(events: TSEventHandlers) 
@@ -258,14 +265,39 @@ export function Main(events: TSEventHandlers)
         {
             if (!firstLogin) return;
 
-            player.SetLevel(60);
+            player.SetLevel(80);
 
             player.LearnClassSpells(true, true);
             player.AdvanceSkillsToMax();
             player.ModifyMoney(10000000000);
-            player.EquipItem(CreateItem(51809, 1), 20, 51809);
-            player.EquipItem(CreateItem(51809, 1), 21, 51809);
-            player.EquipItem(CreateItem(51809, 1), 22, 51809);
+
+            AddItem(player, 51809, 20, true);
+            AddItem(player, 51809, 21, true);
+            AddItem(player, 51809, 22, true);
+
+            if (player.IsAlliance())
+            {
+                player.SetReputation(1068, 100000);
+                player.SetReputation(1094, 100000);
+                player.SetReputation(1050, 100000);
+            }
+            else
+            {
+                player.SetReputation(1085, 100000);
+                player.SetReputation(1064, 100000);
+                player.SetReputation(1124, 100000);       
+                player.SetReputation(1067, 100000);      
+            }
+            
+            player.SetReputation(1106, 100000);
+            player.SetReputation(1104, 2500);
+            player.SetReputation(1090, 100000);
+            player.SetReputation(1098, 100000);
+            player.SetReputation(1156, 100000);
+            player.SetReputation(1073, 100000);
+            player.SetReputation(1105, 100000);
+            player.SetReputation(1119, 100000);
+            player.SetReputation(1091, 100000);
 
             InformGearupUsage(player);
 
@@ -297,8 +329,6 @@ export function Main(events: TSEventHandlers)
         {
             if (dmg.get() == 0) return;
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
-
-            dmgInfo.GetAttacker().ToPlayer().SendUnitSay("AX NAIIIIIIIIIIIIIIIIIIII", 0);
 
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
@@ -472,6 +502,40 @@ function GiveDPSGear(className:string, player:TSPlayer)
                     break;
                 // Shaman
                 case 7:
+                    //HEAD
+                    AddItem(player, 51242, 0, false);
+                    //NECK
+                    AddItem(player, 50633, 1, false);
+                    //SHOULDERS
+                    AddItem(player, 51240, 2, false);
+                    //BACK
+                    AddItem(player, 50653, 14, false);
+                    //CHEST
+                    AddItem(player, 50689, 4, false);
+                    //WRISTS
+                    AddItem(player, 50655, 8, false);
+                    //HANDS
+                    AddItem(player, 51243, 9, false);
+                    //WAIST
+                    AddItem(player, 50688, 5, false);
+                    //LEGS
+                    AddItem(player, 51241, 6, false);
+                    //FEET
+                    AddItem(player, 54577, 7, false);
+                    //FINGER1
+                    AddItem(player, 50678, 10, false);
+                    //FINGER2
+                    AddItem(player, 50402, 11, false);
+                    //TRINKET1
+                    AddItem(player, 50706, 12, false);
+                    //TRINKET2
+                    AddItem(player, 54590, 13, false);
+                    //MAINHAND
+                    AddItem(player, 50737, 15, false);
+                    //OFFHAND
+                    AddItem(player, 50737, 16, false);
+                    //RANGED(totems/wands/etc)
+                    AddItem(player, 50463, 17, false);
                     break;
                 // Mage
                 case 8:
