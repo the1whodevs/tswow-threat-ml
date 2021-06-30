@@ -1,5 +1,5 @@
-import { writeFile } from "node:fs";
-import { eventNames } from "node:process";
+import { writeFile } from "fs";
+import { eventNames } from "process";
 
 const COMMAND_PREFIX = "-";
 const GEARUP_COMMAND = COMMAND_PREFIX + "gearup";
@@ -287,6 +287,9 @@ export function Main(events: TSEventHandlers)
         {
             if (dmg.get() == 0) return;
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
+
+            dmgInfo.GetAttacker().ToPlayer().SendUnitSay("AX NAIIIIIIIIIIIIIIIIIIII", 0);
+
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
             // dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OSDE) Adding entry with threat : " + dmg.get(), 0);
