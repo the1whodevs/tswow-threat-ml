@@ -186,6 +186,41 @@ class ML_Data
         return dump;
     }
 
+    public GetStringWithoutThreat():string
+    {
+        let dump = ""
+
+        for (let entry of this.entries)
+        {
+            dump += entry.class_id + "," +
+            entry.dmg_dealt + "," +
+            entry.stat_3 + "," +
+            entry.stat_4 + "," +
+            entry.stat_5 + "," +
+            entry.stat_6 + "," +
+            entry.stat_7 + "," +
+            entry.stat_12 + "," +
+            entry.stat_13 + "," +
+            entry.stat_14 + "," +
+            entry.stat_15 + "," +
+            entry.stat_31 + "," +
+            entry.stat_32 + "," +
+            entry.stat_33 + "," +
+            entry.stat_34 + "," +
+            entry.stat_38 + "," +
+            entry.stat_39 + "," +
+            entry.stat_41 + "," +
+            entry.stat_42 + "," +
+            entry.stat_44 + "," +
+            entry.stat_45 + "," +
+            entry.stat_46 + "," +
+            entry.stat_47 + "," +
+            entry.stat_48;
+        }
+
+        return dump;
+    }
+
     public GetLastEntry():ML_Entry
     {
         return this.entries.get(this.entries.length-1);
@@ -239,12 +274,12 @@ export function Main(events: TSEventHandlers)
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            // dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OMDE) Adding entry with threat : " + dmg.get(), 0);
-
             data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
             dmgInfo.GetTarget().AddThreat(
                 dmgInfo.GetAttacker().ToPlayer(), 
                 dmg.get(), 0, 0, false, false, true);
+
+            // data.GetStringWithoutThreat().split(',')
         })
         
     
