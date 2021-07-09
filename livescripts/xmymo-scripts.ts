@@ -242,7 +242,10 @@ function AddItem(player:TSPlayer, id:int, slot:int, equip:boolean)
 {
     var item = player.AddItem(id, 1);
 
-    if (equip) player.EquipItem(item, slot, id);
+    if (equip) 
+    {
+        player.EquipItem(item, slot, id);
+    }   
 }
 
 function TalentUp(player:TSPlayer, specId:uint32)
@@ -268,51 +271,17 @@ function GearUp(player:TSPlayer, specId:uint32)
 {
     var classId = player.GetClass();
 
-    // var talentStr = ReadFile(classId+"_"+specId+".csv").split(';');
+    var gearUpStr = ReadFile(classId+"_"+specId+"g.txt").split(';');
 
-    // // For each [talentId, rank] pair, learn!
-    // talentStr.forEach
-    // (
-    //     talentIdRankPair => 
-    //     {
-    //         var pair = talentIdRankPair.split(',');
-    //         player.LearnTalent(ToUInt32(pair[0]), ToUInt32(pair[1]));
-    //     }
-    // );
-    //HEAD
-    AddItem(player, 51242, 0, true);
-    //NECK
-    AddItem(player, 50633, 1, true);
-    //SHOULDERS
-    AddItem(player, 51240, 2, true);
-    //CHEST
-    AddItem(player, 50689, 4, true);
-    //WAIST
-    AddItem(player, 50688, 5, true);
-    //LEGS
-    AddItem(player, 51241, 6, true);
-    //FEET
-    AddItem(player, 54577, 7, true);
-    //WRISTS
-    AddItem(player, 50655, 8, true);
-    //HANDS
-    AddItem(player, 51243, 9, true);
-    //FINGER1
-    AddItem(player, 50678, 10, true);
-    //FINGER2
-    AddItem(player, 50402, 11, true);
-    //TRINKET1
-    AddItem(player, 50706, 12, true);
-    //TRINKET2
-    AddItem(player, 54590, 13, true);
-    //BACK
-    AddItem(player, 50653, 14, true);
-    //MAINHAND
-    AddItem(player, 50737, 15, true);
-    //OFFHAND
-    AddItem(player, 50737, 16, true);
-    //RANGED(totems/wands/etc)
-    AddItem(player, 50463, 17, true);
+    // For each [equipSlot, itemId] pair, equip!
+    gearUpStr.forEach
+    (
+        gearupSlotIdPair => 
+        {
+            var pair = gearupSlotIdPair.split(',');
+            AddItem(player, ToUInt32(pair[1]), ToUInt32(pair[0]), true);
+        }
+    );
 }
 
 function GearAndTalentUp(player:TSPlayer, specId:uint32)
