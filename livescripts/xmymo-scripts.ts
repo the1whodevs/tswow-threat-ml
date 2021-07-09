@@ -1,13 +1,7 @@
-import { writeFile } from "fs";
-import { eventNames } from "process";
+import { eventNames, stderr } from "process";
 
 const COMMAND_PREFIX = "-";
 const GEARUP_COMMAND = COMMAND_PREFIX + "gearup";
-
-const TANK_ROLE = "tank";
-const HEALER_ROLE = "healer";
-const DPS_ROLE = "dps";
-const INVALID_ROLE = "invalid";
 
 class TeleportData 
 {
@@ -251,6 +245,34 @@ function AddItem(player:TSPlayer, id:int, slot:int, equip:boolean)
     if (equip) player.EquipItem(item, slot, id);
 }
 
+function TalentUp(player:TSPlayer, specId:uint32)
+{
+    var classId = player.GetClass();
+
+    player.ResetTalents(true);
+
+    var talentStr = ReadFile(classId+"_"+specId+".csv").split(';');
+
+    // For each [talentId, rank] pair, learn!
+    talentStr.forEach
+    (
+        talentIdRankPair => 
+        {
+            var pair = talentIdRankPair.split(',');
+            player.LearnTalent(ToUInt32(pair[0]), ToUInt32(pair[1]));
+        }
+    );
+}
+
+function Gearup(player:TSPlayer, specId:uint32)
+{
+    var classId = player.GetClass();
+
+    TalentUp(player, specId);
+
+
+}
+
 // Register your events here!
 export function Main(events: TSEventHandlers) 
 {    
@@ -299,7 +321,7 @@ export function Main(events: TSEventHandlers)
             player.SetReputation(1119, 100000);
             player.SetReputation(1091, 100000);
 
-            InformGearupUsage(player);
+            // InformGearupUsage(player);
 
             player.Teleport(
                 STORMWIND_STOCKADES_TP.mapId, 
@@ -376,88 +398,18 @@ export function Main(events: TSEventHandlers)
         }
     )
 
-    events.Player.OnSay((player, type, lang, msg) => 
+    events.Player.OnCommand((player, command, found) => 
+    {
+        var split = command.get().split(' ');
+
+        if (split[0] == "gearup" && 
+            (split[1] == "1" || split[1] == "2" || split[1] == "3"))
         {
-            if (msg.get().length < GEARUP_COMMAND.length) return;
+            Gearup(player, ToUInt32(split[1]));
 
-            if (msg.get() == GEARUP_COMMAND)
-            {
-                InformGearupUsage(player);
-                return;
-            }
-
-            var splitMsg = msg.get().split(' ');
-
-            if (splitMsg.length > 3 || splitMsg.length < 3) InformGearupUsage(player);
-            else if (!CheckIsClassName(splitMsg[1])) InformGearupUsage(player);
-            else
-            {
-                var role = CheckGetRole(splitMsg[2]);
-
-                if (role == INVALID_ROLE) InformGearupUsage(player);
-                else if (!CheckClassCanPlayRole(splitMsg[1], role)) InformGearupUsage(player);
-                else HandleGearUp(splitMsg[1], role, player);
-            }
+            found.set(true);
         }
-    )
-}
-
-function CheckIsClassName(msg:string) : bool
-{
-    var temp = msg.toLowerCase();
-
-    return (
-        temp == "warrior" ||
-        temp == "paladin" ||
-        temp == "hunter" ||
-        temp == "rogue" ||
-        temp == "priest" ||
-        temp == "deathknight" ||
-        temp == "shaman" ||
-        temp == "mage" ||
-        temp == "warlock" ||
-        temp == "druid");
-}
-
-function CheckGetRole(msg:string) : string
-{
-    var temp = msg.toLowerCase();
-
-    if (temp == DPS_ROLE) return DPS_ROLE;
-    if (temp == TANK_ROLE) return TANK_ROLE;
-    if (temp == HEALER_ROLE) return HEALER_ROLE;
-
-    return INVALID_ROLE;
-}
-
-function CheckClassCanPlayRole(className: string, role: string) : bool
-{
-    if (role == DPS_ROLE) return true;
-    if (role == HEALER_ROLE) return CheckClassCanHeal(className);
-    if (role == TANK_ROLE) return CheckClassCanTank(className);
-    return false;
-}
-
-function CheckClassCanTank(className: string) : bool
-{
-    var temp =className.toLowerCase();
-
-    return (
-        temp == "warrior" ||
-        temp == "paladin" ||
-        temp == "deathknight" ||
-        temp == "druid");
-}
-
-function CheckClassCanHeal(className: string) : bool
-{
-    var temp =className.toLowerCase();
-
-    return (
-        temp == "paladin" ||
-        temp == "priest" ||
-        temp == "shaman" ||
-        temp == "druid");
+    })
 }
 
 function InformGearupUsage(player: TSPlayer)
@@ -468,124 +420,45 @@ function InformGearupUsage(player: TSPlayer)
     return;
 }
 
-function HandleGearUp(className:string, role:string, player:TSPlayer)
-{
-    // This part is only reached if a valid gearup command is given, i.e. class & role are valid
-    // both separately and as as combination.
 
-    if (role == DPS_ROLE) GiveDPSGear(className, player);
-    else if (role == HEALER_ROLE) GiveHealerGear(className, player);
-    else GiveTankGear(className, player);
-}
 
-function GiveDPSGear(className:string, player:TSPlayer)
-{
-    switch (player.GetClass())
-            {
-                // Warrior
-                case 1:
-                    break;
-                // Paladin
-                case 2:
-                    break;
-                // Hunter
-                case 3:
-                    break;
-                // Rogue
-                case 4:
-                    break;
-                // Priest
-                case 5:
-                    break;
-                // Death Knight
-                case 6:
-                    break;
-                // Shaman
-                case 7:
-                    //HEAD
-                    AddItem(player, 51242, 0, false);
-                    //NECK
-                    AddItem(player, 50633, 1, false);
-                    //SHOULDERS
-                    AddItem(player, 51240, 2, false);
-                    //BACK
-                    AddItem(player, 50653, 14, false);
-                    //CHEST
-                    AddItem(player, 50689, 4, false);
-                    //WRISTS
-                    AddItem(player, 50655, 8, false);
-                    //HANDS
-                    AddItem(player, 51243, 9, false);
-                    //WAIST
-                    AddItem(player, 50688, 5, false);
-                    //LEGS
-                    AddItem(player, 51241, 6, false);
-                    //FEET
-                    AddItem(player, 54577, 7, false);
-                    //FINGER1
-                    AddItem(player, 50678, 10, false);
-                    //FINGER2
-                    AddItem(player, 50402, 11, false);
-                    //TRINKET1
-                    AddItem(player, 50706, 12, false);
-                    //TRINKET2
-                    AddItem(player, 54590, 13, false);
-                    //MAINHAND
-                    AddItem(player, 50737, 15, false);
-                    //OFFHAND
-                    AddItem(player, 50737, 16, false);
-                    //RANGED(totems/wands/etc)
-                    AddItem(player, 50463, 17, false);
-                    break;
-                // Mage
-                case 8:
-                    break;
-                // Warlock
-                case 9:
-                    break;
-                // Druid
-                case 11:
-                    break;
-                    
-            }
-}
-
-function GiveTankGear(className:string, player:TSPlayer)
-{
-    if (className == "warrior"){
-        // TODO...
-        player.GetLevel
-    }
-    else if (className == "paladin"){
-        // TODO...
-    }
-    else if (className = "deathknight"){
-        // TODO...
-    }
-    // druid
-    else 
-    {
-        // TODO...
-    }
-}
-
-function GiveHealerGear(className:string, player:TSPlayer)
-{
-    if (className == "paladin"){
-        // TODO...
-    }
-    else if (className == "priest"){
-        // TODO...
-    }
-    else if (className = "shaman"){
-        // TODO...
-    }
-    // druid
-    else 
-    {
-        // TODO...
-    }
-}
+/*
+ENHANCEMENT SHAMAN GEAR
+//HEAD
+AddItem(player, 51242, 0, true);
+//NECK
+AddItem(player, 50633, 1, true);
+//SHOULDERS
+AddItem(player, 51240, 2, true);
+//BACK
+AddItem(player, 50653, 14, true);
+//CHEST
+AddItem(player, 50689, 4, true);
+//WRISTS
+AddItem(player, 50655, 8, true);
+//HANDS
+AddItem(player, 51243, 9, true);
+//WAIST
+AddItem(player, 50688, 5, true);
+//LEGS
+AddItem(player, 51241, 6, true);
+//FEET
+AddItem(player, 54577, 7, true);
+//FINGER1
+AddItem(player, 50678, 10, true);
+//FINGER2
+AddItem(player, 50402, 11, true);
+//TRINKET1
+AddItem(player, 50706, 12, true);
+//TRINKET2
+AddItem(player, 54590, 13, true);
+//MAINHAND
+AddItem(player, 50737, 15, true);
+//OFFHAND
+AddItem(player, 50737, 16, true);
+//RANGED(totems/wands/etc)
+AddItem(player, 50463, 17, true);
+*/
 
 //     switch (player.GetClass())
         //     {
