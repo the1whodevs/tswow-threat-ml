@@ -270,7 +270,7 @@ function Gearup(player:TSPlayer, specId:uint32)
 
     TalentUp(player, specId);
 
-
+    
 }
 
 // Register your events here!
