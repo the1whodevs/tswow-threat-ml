@@ -8762,3 +8762,9 @@ Command: modify speed 5 [Player: Drid (GUID Full: 0x000000000000000f
 
 Type: Player Low: 15) (Account: 1) X: -8845.896484 Y: 643.076843 Z: 96.204399 Map: 0 (Eastern Kingdoms) Area: 1519 (Stormwind City) Zone: Unknown Selected:  (GUID Full: 0x0000000000000000 Type: None Low: 0)]
 
+Ping MySQL to keep connection alive
+
+Halting process..
+
+.
+
