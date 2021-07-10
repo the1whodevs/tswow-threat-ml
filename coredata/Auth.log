@@ -1,0 +1,28 @@
+TrinityCore rev. 550774a431fa 2021-02-09 15:33:34 +0100 (tswow branch) (Win64, Release, Dynamic) (authserver)
+<Ctrl-C> to stop.
+
+ ______                       __
+/\__  _\       __          __/\ \__
+\/_/\ \/ _ __ /\_\    ___ /\_\ \, _\  __  __
+   \ \ \/\`'__\/\ \ /' _ `\/\ \ \ \/ /\ \/\ \
+    \ \ \ \ \/ \ \ \/\ \/\ \ \ \ \ \_\ \ \_\ \
+     \ \_\ \_\  \ \_\ \_\ \_\ \_\ \__\\/`____ \
+      \/_/\/_/   \/_/\/_/\/_/\/_/\/__/ `/___/> \
+                                 C O R E  /\___/
+http://TrinityCore.org                    \/__/
+
+Using configuration file C:/Users/xmymo/Documents/ts-wow/coredata/authserver.conf.
+Using SSL version: OpenSSL 1.1.1h  22 Sep 2020 (library: OpenSSL 1.1.1h  22 Sep 2020)
+Using Boost version: 1.72.0
+Automatic database updates are disabled for all databases!
+Opening DatabasePool 'acore_auth'. Asynchronous connections: 1, synchronous connections: 1.
+MySQL client library: 5.7.32
+MySQL server ver: 5.7.32 
+Connected to MySQL database at localhost
+MySQL client library: 5.7.32
+MySQL server ver: 5.7.32 
+Connected to MySQL database at localhost
+DatabasePool 'acore_auth' opened successfully. 2 total connections running.
+Started auth database connection pool.
+Loading IP Location Database...
+Added realm "Trinity" at 127.0.0.1:8085.

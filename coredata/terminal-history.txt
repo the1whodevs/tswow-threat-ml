@@ -1,0 +1,22 @@
+realm stop
+accounts
+?
+account set password costarelian costarelian
+realm set
+realm send tswow account set password costarelian costarelian123
+realm send tswow account set password costarelian costarelian123 costarelian123
+realm send tswow tele Hoboerectus stormwind
+realm send tswow tele
+realm send tswow tele Hoboerectus
+realm send tswow tele Stowrmwind
+build scripts
+build livescripts --allow-globals
+realm send tswow spawn
+realm send tswow create
+build all
+check
+build data
+realm status
+build all --allow-globals --trace
+realm start
+build livescripts --allow-globals --trace

@@ -1,0 +1,12 @@
+# TSWoW Realm Configuration
+
+dataset: default
+realm_name: tswow
+address: cuddleshouse.ddns.net
+local_address: 127.0.0.1
+local_subnet_mask: 255.255.255.0
+port: 25696
+type: 0
+flag: 0
+security_level: 0
+timezone: 1

@@ -1,0 +1,6 @@
+item_template|my-module:thunderfury-2|100000|100000|
+item_template|my-module2:thunderfury-2|100001|100001|
+ChrClasses|xmymo-mymod:necro|12|12|
+ChrClasses|xmymo-mymod:852|13|13|
+SkillLineAbility|tswow-introduction:necromancy-skill|789|789|
+SkillLineAbility|tswow-introduction:death-skill|790|790|
