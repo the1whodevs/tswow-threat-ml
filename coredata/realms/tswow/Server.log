@@ -24,83 +24,83 @@ WORLD: MMap data directory is: C:\Users\xmymo\Documents\ts-wow\coredata\datasets
 VMap support included. LineOfSight: 1, getHeight: 1, indoorCheck: 1
 VMap data directory is: C:\Users\xmymo\Documents\ts-wow\coredata\datasets\default/vmaps
 Loading Trinity strings...
->> Loaded 1030 trinity strings in 8 ms
+>> Loaded 1030 trinity strings in 10 ms
 Initialize data stores...
->> Initialized 116 data stores in 608 ms
+>> Initialized 116 data stores in 632 ms
 Using enUS DBC Locale as default. All available DBC locales: enUS 
 >> Loading Cinematic Camera files
->> Loaded 0 cinematic waypoint sets in 1 ms
+>> Loaded 0 cinematic waypoint sets in 0 ms
 Loading IP Location Database...
 Initializing PlayerDump tables...
->> Initialized tables for PlayerDump in 11 ms.
+>> Initialized tables for PlayerDump in 37 ms.
 Loading SpellInfo store...
->> Loaded SpellInfo store in 66 ms
+>> Loaded SpellInfo store in 76 ms
 Loading SpellInfo corrections...
->> Loaded SpellInfo corrections in 11 ms
+>> Loaded SpellInfo corrections in 13 ms
 Loading SkillLineAbilityMultiMap Data...
 >> Loaded 10219 SkillLineAbility MultiMap Data in 1 ms
 Loading SpellInfo custom attributes...
->> Loaded 265 spell custom attributes from DB in 2 ms
->> Loaded SpellInfo custom attributes in 42 ms
+>> Loaded 265 spell custom attributes from DB in 1 ms
+>> Loaded SpellInfo custom attributes in 43 ms
 Loading SpellInfo diminishing infos...
 >> Loaded SpellInfo diminishing infos in 6 ms
 Loading SpellInfo immunity infos...
->> Loaded SpellInfo immunity infos in 10 ms
+>> Loaded SpellInfo immunity infos in 12 ms
 Loading Player Totem models...
->> Loaded 20 player totem model records in 0 ms
+>> Loaded 20 player totem model records in 1 ms
 Loading GameObject models...
 Loading Script Names...
->> Loaded 3008 ScriptNames in 125 ms
+>> Loaded 3008 ScriptNames in 124 ms
 Loading Instance Template...
->> Loaded 84 instance templates in 0 ms
+>> Loaded 84 instance templates in 1 ms
 Loading instances...
->> Loaded instances in 2 ms
+>> Loaded instances in 3 ms
 Loading character cache store...
-Loaded character infos for 11 characters in 0 ms
+Loaded character infos for 11 characters in 1 ms
 Loading Broadcast texts...
->> Loaded 73039 broadcast texts in 212 ms
->> Loaded 73039 broadcast text locales in 1118 ms
+>> Loaded 73039 broadcast texts in 204 ms
+>> Loaded 73039 broadcast text locales in 1168 ms
 Loading Localization strings...
->> Loaded 27246 creature locale strings in 242 ms
->> Loaded 19673 gameobject_template_locale strings in 154 ms
->> Loaded 38122 Item locale strings in 363 ms
->> Loaded 2481 Item set name locale strings in 11 ms
->> Loaded 9458 Quest locale strings in 339 ms
->> Loaded 5388 Quest Offer Reward locale strings in 46 ms
+>> Loaded 27246 creature locale strings in 266 ms
+>> Loaded 19673 gameobject_template_locale strings in 170 ms
+>> Loaded 38122 Item locale strings in 390 ms
+>> Loaded 2481 Item set name locale strings in 12 ms
+>> Loaded 9458 Quest locale strings in 366 ms
+>> Loaded 5388 Quest Offer Reward locale strings in 47 ms
 >> Loaded 3664 Quest Request Items locale strings in 24 ms
 >> Loaded 26 NpcText locale strings in 2 ms
->> Loaded 1946 PageText locale strings in 42 ms
+>> Loaded 1946 PageText locale strings in 41 ms
 >> Loaded 1 gossip_menu_option locale strings in 1 ms
 >> Loaded 453 points_of_interest locale strings in 3 ms
 >> Loaded 72 quest greeting locale strings in 1 ms
->> Localization strings loaded in 1229 ms
+>> Localization strings loaded in 1324 ms
 Loading Account Roles and Permissions...
->> Loaded 671 permission definitions, 650 linked permissions and 4 default permissions in 6 ms
+>> Loaded 671 permission definitions, 650 linked permissions and 4 default permissions in 7 ms
 Loading Page Texts...
->> Loaded 1951 page texts in 9 ms
+>> Loaded 1951 page texts in 8 ms
 Loading Game Object Templates...
->> Loaded 21572 game object templates in 92 ms
+>> Loaded 21572 game object templates in 96 ms
 Loading Game Object template addons...
->> Loaded 21500 game object template addons in 28 ms
+>> Loaded 21500 game object template addons in 26 ms
 Loading Transport templates...
 >> Loaded 30 transport templates in 11 ms
 Loading Transport animations and rotations...
 Loading Spell Rank Data...
->> Loaded 3465 spell rank records in 4 ms
+>> Loaded 3465 spell rank records in 5 ms
 Loading Spell Required Data...
 >> Loaded 41 spell required records in 1 ms
 Loading Spell Group types...
->> Loaded 551 spell group definitions in 2 ms
+>> Loaded 551 spell group definitions in 1 ms
 Loading Spell Learn Skills...
 >> Loaded 103 Spell Learn Skills from DBC in 2 ms
 Loading SpellInfo SpellSpecific and AuraState...
->> Loaded SpellInfo SpellSpecific and AuraState in 11 ms
+>> Loaded SpellInfo SpellSpecific and AuraState in 13 ms
 Loading Spell Learn Spells...
 >> Loaded 8 spell learn spells + 574 found in DBC in 3 ms
 Loading Spell Proc conditions and data...
->> Loaded 845 spell proc conditions and data in 2 ms
+>> Loaded 845 spell proc conditions and data in 3 ms
 Generating spell proc data from SpellMap...
->> Generated spell proc data for 1386 spells in 4 ms
+>> Generated spell proc data for 1386 spells in 3 ms
 Loading Spell Bonus Data...
 >> Loaded 216 extra spell bonus data in 1 ms
 Loading Aggro Spells Definitions...
@@ -108,63 +108,63 @@ Loading Aggro Spells Definitions...
 Loading Spell Group Stack Rules...
 >> Loaded 66 spell group stack rules in 1 ms
 >> Parsing SPELL_GROUP_STACK_RULE_EXCLUSIVE_SAME_EFFECT stack rules...
->> Parsed 14 SPELL_GROUP_STACK_RULE_EXCLUSIVE_SAME_EFFECT stack rules in 0 ms
+>> Parsed 14 SPELL_GROUP_STACK_RULE_EXCLUSIVE_SAME_EFFECT stack rules in 1 ms
 Loading NPC Texts...
->> Loaded 8294 npc texts in 98 ms
+>> Loaded 8294 npc texts in 96 ms
 Loading Enchant Spells Proc datas...
 >> Loaded 42 enchant proc data definitions in 1 ms
 Loading Item Random Enchantments Table...
->> Loaded 28607 Item Enchantment definitions in 20 ms
+>> Loaded 28607 Item Enchantment definitions in 19 ms
 Loading Disables
 >> Loaded 864 disables in 2 ms
 Loading Items...
->> Loaded 38607 item templates in 517 ms
+>> Loaded 38607 item templates in 529 ms
 Loading Item set names...
->> Loaded 2481 item set names in 3 ms
+>> Loaded 2481 item set names in 4 ms
 Loading Creature Model Based Info Data...
 >> Loaded 24143 creature model based info in 25 ms
 Loading Creature template outfits...
 >> Loaded 0 creature outfits. DB table `creature_template_outfits` is empty!
 Loading Creature templates...
->> Loaded 1606 creature template resistances in 4 ms
+>> Loaded 1606 creature template resistances in 3 ms
 >> Loaded 9644 creature template spells in 9 ms
->> Loaded 29924 creature definitions in 301 ms
+>> Loaded 29924 creature definitions in 313 ms
 Loading Equipment templates...
->> Loaded 10874 equipment templates in 14 ms
+>> Loaded 10874 equipment templates in 17 ms
 Loading Creature template addons...
->> Loaded 16041 creature template addons in 20 ms
+>> Loaded 16041 creature template addons in 23 ms
 Loading Reputation Reward Rates...
 >> Loaded 16 reputation_reward_rate in 1 ms
 Loading Creature Reputation OnKill Data...
->> Loaded 2028 creature award reputation definitions in 4 ms
+>> Loaded 2028 creature award reputation definitions in 5 ms
 Loading Reputation Spillover Data...
 >> Loaded 26 reputation_spillover_template in 1 ms
 Loading Points Of Interest Data...
->> Loaded 453 Points of Interest definitions in 1 ms
+>> Loaded 453 Points of Interest definitions in 2 ms
 Loading Creature Base Stats...
->> Loaded 400 creature base stats in 4 ms
+>> Loaded 400 creature base stats in 5 ms
 Loading Spawn Group Templates...
->> Loaded 67 spawn group templates in 0 ms
+>> Loaded 67 spawn group templates in 1 ms
 Loading instance spawn groups...
->> Loaded 55 instance spawn groups in 1 ms
+>> Loaded 55 instance spawn groups in 0 ms
 Loading Creature Data...
->> Loaded 151298 creatures in 888 ms
+>> Loaded 151298 creatures in 936 ms
 Loading Temporary Summon Data...
 >> Loaded 1093 temp summons in 4 ms
 Loading pet levelup spells...
->> Loaded 993 pet levelup and default spells for 39 families in 3 ms
+>> Loaded 993 pet levelup and default spells for 39 families in 4 ms
 Loading pet default spells additional to levelup spells...
 >> Loaded addition spells for 111 pet spell data entries in 3 ms
 Loading summonable creature templates...
 >> Loaded 464 summonable creature templates in 3 ms
 Loading Creature Addon Data...
->> Loaded 32321 creature addons in 42 ms
+>> Loaded 32321 creature addons in 43 ms
 Loading Creature Movement Overrides...
->> Loaded 10 movement overrides in 1 ms
+>> Loaded 10 movement overrides in 2 ms
 Loading Gameobject Data...
->> Loaded 92597 gameobjects in 687 ms
+>> Loaded 92597 gameobjects in 688 ms
 Loading Spawn Group Data...
->> Loaded 97259 spawn group members in 62 ms
+>> Loaded 97259 spawn group members in 66 ms
 Loading GameObject Addon Data...
 >> Loaded 59648 gameobject addons in 98 ms
 Loading GameObject faction and flags overrides...
@@ -172,9 +172,9 @@ Loading GameObject faction and flags overrides...
 Loading GameObject Quest Items...
 >> Loaded 857 gameobject quest items in 1 ms
 Loading Creature Quest Items...
->> Loaded 4391 creature quest items in 5 ms
+>> Loaded 4391 creature quest items in 4 ms
 Loading Creature Linked Respawn...
->> Loaded 4785 linked respawns in 5 ms
+>> Loaded 4785 linked respawns in 4 ms
 Loading Weather Data...
 >> Loaded 35 weather definitions in 0 ms
 Loading Quests...
@@ -187,24 +187,24 @@ Loading Quests Starters and Enders...
 Loading GO Start Quest Data...
 >> Loaded 446 quest relations from gameobject_queststarter in 1 ms
 Loading GO End Quest Data...
->> Loaded 457 quest relations from gameobject_questender in 1 ms
+>> Loaded 457 quest relations from gameobject_questender in 2 ms
 Loading Creature Start Quest Data...
 >> Loaded 7421 quest relations from creature_queststarter in 6 ms
 Loading Creature End Quest Data...
->> Loaded 7859 quest relations from creature_questender in 6 ms
+>> Loaded 7859 quest relations from creature_questender in 7 ms
 Loading Quests Greetings...
 >> Loaded 178 quest_greeting in 1 ms
 Loading Objects Pooling Data...
 >> Loaded 3508 objects pools in 2 ms
 Loading Creatures Pooling Data...
->> Loaded 1374 creatures in pools in 9 ms
+>> Loaded 1374 creatures in pools in 10 ms
 Loading Gameobject Pooling Data...
->> Loaded 26127 gameobject in pools in 167 ms
+>> Loaded 26127 gameobject in pools in 176 ms
 Loading Mother Pooling Data...
->> Loaded 2589 pools in mother pools in 17 ms
+>> Loaded 2589 pools in mother pools in 21 ms
 Starting objects pooling system...
 Loading Quest Pooling Data...
->> Loaded 35 daily, 7 weekly and 0 monthly quest pools in 3 ms
+>> Loaded 35 daily, 7 weekly and 0 monthly quest pools in 5 ms
 Loading Game Event Data...
 >> Loaded 156 holiday dates in 2 ms
 >> Loaded 83 game events in 1 ms.
@@ -213,15 +213,15 @@ Loading Game Event Saves Data...
 Loading Game Event Prerequisite Data...
 >> Loaded 0 game event prerequisites in game events. DB table `game_event_prerequisite` is empty.
 Loading Game Event Creature Data...
->> Loaded 9846 creatures in game events in 8 ms.
+>> Loaded 9846 creatures in game events in 9 ms.
 Loading Game Event GO Data...
->> Loaded 31249 gameobjects in game events in 21 ms.
+>> Loaded 31249 gameobjects in game events in 24 ms.
 Loading Game Event Model/Equipment Change Data...
->> Loaded 9 model/equipment changes in game events in 0 ms.
+>> Loaded 9 model/equipment changes in game events in 1 ms.
 Loading Game Event Quest Data...
 >> Loaded 228 quests additions in game events in 0 ms.
 Loading Game Event GO Quest Data...
->> Loaded 78 quests additions in game events in 1 ms.
+>> Loaded 78 quests additions in game events in 0 ms.
 Loading Game Event Quest Condition Data...
 >> Loaded 0 quest event conditions in game events. DB table `game_event_quest_condition` is empty.
 Loading Game Event Condition Data...
@@ -229,7 +229,7 @@ Loading Game Event Condition Data...
 Loading Game Event Condition Save Data...
 >> Loaded 0 condition saves in game events. DB table `game_event_condition_save` is empty.
 Loading Game Event NPCflag Data...
->> Loaded 5 npcflags in game events in 1 ms.
+>> Loaded 5 npcflags in game events in 0 ms.
 Loading Game Event Seasonal Quest Relations...
 >> Loaded 690 quests additions in game events in 1 ms.
 Loading Game Event Vendor Additions Data...
@@ -237,13 +237,13 @@ Loading Game Event Vendor Additions Data...
 Loading Game Event Battleground Holiday Data...
 >> Loaded 6 battleground holidays in game events in 0 ms.
 Loading Game Event Pool Data...
->> Loaded 9 pools for game events in 0 ms.
+>> Loaded 9 pools for game events in 1 ms.
 Loading UNIT_NPC_FLAG_SPELLCLICK Data...
 >> Loaded 325 spellclick definitions in 4 ms
 Loading Vehicle Templates...
 >> Loaded 0 vehicle template. DB table `vehicle_template` is empty.
 Loading Vehicle Template Accessories...
->> Loaded 198 Vehicle Template Accessories in 0 ms
+>> Loaded 198 Vehicle Template Accessories in 1 ms
 Loading Vehicle Accessories...
 >> Loaded 0 Vehicle Accessories in 0 ms
 Loading Vehicle Seat Addon Data...
@@ -251,15 +251,15 @@ Loading Vehicle Seat Addon Data...
 Loading SpellArea Data...
 >> Loaded 768 spell area requirements in 2 ms
 Loading AreaTrigger definitions...
->> Loaded 276 area trigger teleport definitions in 1 ms
+>> Loaded 276 area trigger teleport definitions in 2 ms
 Loading Access Requirements...
->> Loaded 121 access requirement definitions in 0 ms
+>> Loaded 121 access requirement definitions in 1 ms
 Loading Quest Area Triggers...
 >> Loaded 60 quest trigger points in 1 ms
 Loading Tavern Area Triggers...
->> Loaded 114 tavern triggers in 0 ms
+>> Loaded 114 tavern triggers in 1 ms
 Loading AreaTrigger script names...
->> Loaded 207 areatrigger scripts in 1 ms
+>> Loaded 207 areatrigger scripts in 0 ms
 Loading LFG entrance positions...
 >> Loaded 20 lfg entrance positions in 1 ms
 Loading Dungeon boss data...
@@ -269,51 +269,51 @@ Loading LFG rewards...
 Loading Graveyard-zone links...
 >> Loaded 700 graveyard-zone links in 2 ms
 Loading spell pet auras...
->> Loaded 47 spell pet auras in 1 ms
+>> Loaded 47 spell pet auras in 0 ms
 Loading Spell target coordinates...
 >> Loaded 592 spell teleport coordinates in 2 ms
 Loading enchant custom attributes...
 >> Loaded 32 custom enchant attributes in 1 ms
 Loading linked spells...
->> Loaded 457 linked spells in 1 ms
+>> Loaded 457 linked spells in 3 ms
 Loading Player Create Data...
->> Loaded 62 player create definitions in 1 ms
+>> Loaded 62 player create definitions in 2 ms
 Loading Player Create Items Data...
->> Loaded 1 custom player create items in 0 ms
+>> Loaded 1 custom player create items in 1 ms
 Loading Player Create Skill Data...
->> Loaded 1660 player create skills in 2 ms
+>> Loaded 1660 player create skills in 1 ms
 Loading Player Create Spell Data...
->> Loaded 2680 custom player create spells in 1 ms
+>> Loaded 2680 custom player create spells in 2 ms
 Loading Player Create Cast Spell Data...
 >> Loaded 19 player create cast spells in 0 ms
 Loading Player Create Action Data...
->> Loaded 325 player create actions in 0 ms
+>> Loaded 325 player create actions in 1 ms
 Loading Player Create Level HP/Mana Data...
->> Loaded 880 level health/mana definitions in 2 ms
+>> Loaded 880 level health/mana definitions in 1 ms
 Loading Player Create Level Stats Data...
->> Loaded 5200 level stats definitions in 4 ms
+>> Loaded 5200 level stats definitions in 5 ms
 Loading Player Create XP Data...
 >> Loaded 79 xp for level definitions in 1 ms
 Loading Exploration BaseXP Data...
 >> Loaded 80 BaseXP definitions in 0 ms
 Loading Pet Name Parts...
->> Loaded 313 pet name parts in 0 ms
+>> Loaded 313 pet name parts in 1 ms
 Loading the max pet number...
 >> Loaded the max pet number: 0 in 0 ms
 Loading pet level stats...
->> Loaded 2560 level pet stats definitions in 4 ms
+>> Loaded 2560 level pet stats definitions in 6 ms
 Loading Player level dependent mail rewards...
 >> Loaded 25 level dependent mail rewards in 1 ms
 Loading creature loot templates...
->> Loaded 316612 creature loot templates in 448 ms
+>> Loaded 316612 creature loot templates in 467 ms
 Loading fishing loot templates...
 >> Loaded 281 fishing loot templates in 2 ms
 Loading gameobject loot templates...
->> Loaded 16756 gameobject loot templates in 25 ms
+>> Loaded 16756 gameobject loot templates in 29 ms
 Loading item loot templates...
->> Loaded 4998 item loot templates in 11 ms
+>> Loaded 4998 item loot templates in 13 ms
 Loading mail loot templates...
->> Loaded 117 mail loot templates in 1 ms
+>> Loaded 117 mail loot templates in 2 ms
 Loading milling loot templates...
 >> Loaded 45 milling loot templates in 5 ms
 Loading pickpocketing loot templates...
@@ -321,33 +321,33 @@ Loading pickpocketing loot templates...
 Loading skinning loot templates...
 >> Loaded 1537 skinning loot templates in 19 ms
 Loading disenchanting loot templates...
->> Loaded 124 disenchanting loot templates in 8 ms
+>> Loaded 124 disenchanting loot templates in 6 ms
 Loading prospecting loot templates...
->> Loaded 36 prospecting loot templates in 6 ms
+>> Loaded 36 prospecting loot templates in 5 ms
 Loading spell loot templates...
->> Loaded 166 spell loot templates in 4 ms
+>> Loaded 166 spell loot templates in 6 ms
 Loading reference loot templates...
->> Loaded reference loot templates in 38 ms
+>> Loaded reference loot templates in 43 ms
 Loading Skill Discovery Table...
->> Loaded 347 skill discovery definitions in 3 ms.
+>> Loaded 347 skill discovery definitions in 4 ms.
 Loading Skill Extra Item Table...
->> Loaded 225 spell specialization definitions in 1 ms
+>> Loaded 225 spell specialization definitions in 2 ms
 Loading Skill Perfection Data Table...
 >> Loaded 72 spell perfection definitions in 1 ms.
 Loading Skill Fishing base level requirements...
->> Loaded 113 areas for fishing base skill level in 0 ms
+>> Loaded 113 areas for fishing base skill level in 1 ms
 Loading Achievements...
->> Loaded 43 achievement references in 1 ms.
+>> Loaded 43 achievement references in 0 ms.
 Loading Achievement Criteria Lists...
 >> Loaded 7655 achievement criteria in 2 ms.
 Loading Achievement Criteria Data...
->> Loaded 2694 additional achievement criteria data in 3 ms
+>> Loaded 2694 additional achievement criteria data in 4 ms
 Loading Achievement Rewards...
 >> Loaded 112 achievement rewards in 1 ms.
 Loading Achievement Reward Locales...
 >> Loaded 31 achievement reward locale strings in 1 ms.
 Loading Completed Achievements...
->> Loaded 43 realm first completed achievements in 1 ms.
+>> Loaded 43 realm first completed achievements in 0 ms.
 Loading Item Auctions...
 >> Loaded 0 auction items. DB table `auctionhouse` or `item_instance` is empty!
 Loading Auctions...
@@ -362,39 +362,39 @@ Loading Groups...
 Loading ReservedNames...
 >> Loaded 0 reserved player names. DB table `reserved_name` is empty!
 Loading GameObjects for quests...
->> Loaded 1795 GameObjects for quests in 2 ms
+>> Loaded 1795 GameObjects for quests in 4 ms
 Loading BattleMasters...
->> Loaded 157 battlemaster entries in 3 ms
+>> Loaded 157 battlemaster entries in 5 ms
 Loading GameTeleports...
->> Loaded 1432 GameTeleports in 4 ms
+>> Loaded 1432 GameTeleports in 5 ms
 Loading Trainers...
 >> Loaded 126 Trainers in 9 ms
 Loading Creature default trainers...
->> Loaded 806 default trainers in 2 ms
+>> Loaded 806 default trainers in 1 ms
 Loading Gossip menu...
->> Loaded 6086 gossip_menu IDs in 4 ms
+>> Loaded 6086 gossip_menu IDs in 5 ms
 Loading Gossip menu options...
 >> Loaded 4359 gossip_menu_option entries in 34 ms
 Loading Vendors...
->> Loaded 37577 Vendors in 40 ms
+>> Loaded 37577 Vendors in 41 ms
 Loading Waypoints...
->> Loaded 134844 waypoints in 311 ms
+>> Loaded 134844 waypoints in 318 ms
 Loading SmartAI Waypoints...
->> Loaded 806 SmartAI waypoint paths (total 10913 waypoints) in 22 ms
+>> Loaded 806 SmartAI waypoint paths (total 10913 waypoints) in 15 ms
 Loading Creature Formations...
->> Loaded 2071 creatures in formations in 3 ms
+>> Loaded 2071 creatures in formations in 4 ms
 Loading World States...
->> Loaded 95 world states in 0 ms
+>> Loaded 95 world states in 2 ms
 Loading Conditions...
->> Loaded 14652 conditions in 34 ms
+>> Loaded 14652 conditions in 35 ms
 Loading faction change achievement pairs...
 >> Loaded 125 faction change achievement pairs in 1 ms
 Loading faction change spell pairs...
->> Loaded 111 faction change spell pairs in 0 ms
+>> Loaded 111 faction change spell pairs in 1 ms
 Loading faction change quest pairs...
 >> Loaded 251 faction change quest pairs in 1 ms
 Loading faction change item pairs...
->> Loaded 1355 faction change item pairs in 2 ms
+>> Loaded 1355 faction change item pairs in 1 ms
 Loading faction change reputation pairs...
 >> Loaded 16 faction change reputation pairs in 0 ms
 Loading faction change title pairs...
@@ -402,9 +402,9 @@ Loading faction change title pairs...
 Loading GM tickets...
 >> Loaded 0 GM tickets. DB table `gm_ticket` is empty!
 Loading GM surveys...
->> Loaded GM Survey count from database in 0 ms
+>> Loaded GM Survey count from database in 2 ms
 Loading client addons...
->> Loaded 23 known addons in 1 ms
+>> Loaded 23 known addons in 2 ms
 Returning old mails...
 >> No expired mails found.
 Loading Autobroadcasts...
@@ -412,18 +412,18 @@ Loading Autobroadcasts...
 Loading spell_scripts...
 >> Loaded 172 script definitions in 1 ms
 Loading event_scripts...
->> Loaded 530 script definitions in 2 ms
+>> Loaded 530 script definitions in 3 ms
 Loading waypoint_scripts...
 >> Loaded 709 script definitions in 2 ms
 Loading spell script names...
 >> Loaded 2257 spell script names in 4 ms
 Loading Creature Texts...
->> Loaded 17030 creature texts for 3809 creatures in 37 ms
+>> Loaded 17030 creature texts for 3809 creatures in 40 ms
 Loading Creature Text Locales...
 >> Loaded 1 creature localized texts in 1 ms
 Initializing Scripts...
 Loading Script Waypoints for 47 creature(s)...
->> Loaded 1078 Script Waypoint nodes in 3 ms
+>> Loaded 1078 Script Waypoint nodes in 4 ms
 >> Loaded spline chain data for 124 chains, consisting of 325 splines with 1684 waypoints in 7 ms
 Loading C++ scripts
 Correcting your CMAKE_INSTALL_PREFIX in "D:/dev/wow/tswow-build/trinitycore"...
@@ -456,15 +456,15 @@ Loading script module "scripts_world.dll"...
 >> Loaded script module "scripts_world.dll" ("World" - cbc8b56).
 >> Loaded 13 script modules.
 >> Library reloader is listening on "C:/Users/xmymo/Documents/ts-wow/bin/trinitycore/RelWithDebInfo/scripts".
->> Loaded 3056 C++ scripts in 440 ms
+>> Loaded 3056 C++ scripts in 478 ms
 Validating spell scripts...
->> Validated 2838 scripts in 5 ms
+>> Validated 2838 scripts in 8 ms
 Loading SmartAI scripts...
->> Loaded SmartAIMgr Helpers in 9 ms
->> Loaded 13268 SmartAI scripts in 166 ms
+>> Loaded SmartAIMgr Helpers in 14 ms
+>> Loaded 13268 SmartAI scripts in 193 ms
 Loading Calendar data...
->> Loaded 0 calendar events in 0 ms
->> Loaded 0 calendar invites in 1 ms
+>> Loaded 0 calendar events in 2 ms
+>> Loaded 0 calendar invites in 3 ms
 Loading Petitions...
 >> Loaded 0 petitions.
 Loading Signatures...
@@ -473,10 +473,10 @@ Loading Item loot...
 >> Loaded 0 stored item loots
 >> Loaded 0 stored item money
 Initialize query data...
->> Initialized query cache data in 1407 ms
+>> Initialized query cache data in 1512 ms
 Initialize commands...
 Initialize game time and timers
-Mail timer set to: 480, mail return is called every 1440 minutes
+Mail timer set to: 900, mail return is called every 1440 minutes
 Starting Map System
 Starting Game Event system...
 Initialize AuctionHouseBot...
@@ -485,9 +485,9 @@ Initializing chat channels...
 Initializing Opcodes...
 Starting Arena Season...
 Starting Battleground System
->> Loaded 11 battlegrounds in 1 ms
+>> Loaded 11 battlegrounds in 0 ms
 Starting Outdoor PvP System
->> Loaded 6 outdoor PvP definitions in 0 ms
+>> Loaded 6 outdoor PvP definitions in 1 ms
 Starting Battlefield System
 Could not load MMAP name:Northrend, id:571, x:22, y:26 (mmap rep.: x:22, y:26)
 Could not load MMAP name:Northrend, id:571, x:21, y:26 (mmap rep.: x:21, y:26)
@@ -496,7 +496,7 @@ Could not load MMAP name:Northrend, id:571, x:22, y:27 (mmap rep.: x:22, y:27)
 Could not load MMAP name:Northrend, id:571, x:23, y:25 (mmap rep.: x:23, y:25)
 Could not load MMAP name:Northrend, id:571, x:23, y:28 (mmap rep.: x:23, y:28)
 Could not load MMAP name:Northrend, id:571, x:23, y:26 (mmap rep.: x:23, y:26)
->> Loaded 1 battlefields in 44 ms
+>> Loaded 1 battlefields in 51 ms
 Loading Transports...
 Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
@@ -516,7 +516,7 @@ Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:
 Could not load MMAP name:Northrend, id:571, x:17, y:29 (mmap rep.: x:17, y:29)
 Could not load MMAP name:Northrend, id:571, x:17, y:28 (mmap rep.: x:17, y:28)
 Could not load MMAP name:Kalimdor, id:1, x:33, y:32 (mmap rep.: x:33, y:32)
->> Spawned 20 continent transports in 167 ms
+>> Spawned 20 continent transports in 180 ms
 Loading Warden Checks...
 Loading Warden Action Overrides...
 Deleting expired bans...
@@ -524,76 +524,9 @@ Initializing quest reset times...
 Calculate random battleground reset time...
 Calculate deletion of old calendar events time...
 Calculate guild limitation(s) reset time...
-World initialized in 0 minutes 10 seconds
+World initialized in 0 minutes 11 seconds
 Starting up anti-freeze thread (60 seconds max stuck time)...
 TrinityCore rev. cbc8b564cc45 2021-06-22 12:10:23 +0300 (tswow branch) (Win64, RelWithDebInfo, Dynamic) (worldserver-daemon) ready...
-Could not load MMAP name:Kalimdor, id:1, x:12, y:30 (mmap rep.: x:12, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:30 (mmap rep.: x:48, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:30 (mmap rep.: x:49, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Released script module "scripts_tswow_xmymo.dll" ("xmymo")...
->> Loaded script module "scripts_tswow_xmymo.dll" ("xmymo" - cbc8b56).
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Released script module "scripts_tswow_xmymo.dll" ("xmymo")...
->> Loaded script module "scripts_tswow_xmymo.dll" ("xmymo" - cbc8b56).
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
 Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
 Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
 Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
@@ -604,287 +537,357 @@ Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30,
 Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
 Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
 Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:30 (mmap rep.: x:48, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:30 (mmap rep.: x:49, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
+Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
+Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
+Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
+Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
+Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:30 (mmap rep.: x:49, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
+Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
+Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
+Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
+Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
+Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
+Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
+Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
+Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:30 (mmap rep.: x:49, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
+Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
+Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
+Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
+Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
+Released script module "scripts_tswow_xmymo.dll" ("xmymo")...
+>> Loaded script module "scripts_tswow_xmymo.dll" ("xmymo" - cbc8b56).
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:33 (mmap rep.: x:32, y:33)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:33 (mmap rep.: x:31, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:30 (mmap rep.: x:49, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
 Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
 Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
 Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
+Released script module "scripts_tswow_xmymo.dll" ("xmymo")...
+>> Loaded script module "scripts_tswow_xmymo.dll" ("xmymo" - cbc8b56).
 Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:31 (mmap rep.: x:31, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:32, y:30 (mmap rep.: x:32, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Stormwind Stockade, id:34, x:31, y:30 (mmap rep.: x:31, y:30)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:31 (mmap rep.: x:30, y:31)
+Could not load MMAP name:Stormwind Stockade, id:34, x:30, y:32 (mmap rep.: x:30, y:32)
 Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000410 Type: Item Low: 1040). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000411 Type: Item Low: 1041). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000412 Type: Item Low: 1042). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000413 Type: Item Low: 1043). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000414 Type: Item Low: 1044). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000415 Type: Item Low: 1045). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000416 Type: Item Low: 1046). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000417 Type: Item Low: 1047). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000418 Type: Item Low: 1048). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x4000000000000419 Type: Item Low: 1049). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x400000000000041a Type: Item Low: 1050). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x400000000000041b Type: Item Low: 1051). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
-Player::_SaveInventory: Player 'Drid' (GUID Full: 0x000000000000000f Type: Player Low: 15) has incorrect values (Bag: 255, Slot: 0) for the item (GUID Full: 0x400000000000041d Type: Item Low: 1053). GUID Full: 0x400000000000041f Type: Item Low: 1055 is there instead!
 Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
 Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
 Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
+Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:32 (mmap rep.: x:49, y:32)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:32 (mmap rep.: x:48, y:32)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:30 (mmap rep.: x:50, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:31 (mmap rep.: x:50, y:31)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:32 (mmap rep.: x:50, y:32)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:33 (mmap rep.: x:50, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:33 (mmap rep.: x:49, y:33)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:31 (mmap rep.: x:51, y:31)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:32 (mmap rep.: x:51, y:32)
+Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:33 (mmap rep.: x:51, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:33 (mmap rep.: x:49, y:33)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:34 (mmap rep.: x:51, y:34)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:32 (mmap rep.: x:52, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:33 (mmap rep.: x:52, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:34 (mmap rep.: x:52, y:34)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:34 (mmap rep.: x:50, y:34)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:33 (mmap rep.: x:53, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:34 (mmap rep.: x:53, y:34)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:35 (mmap rep.: x:53, y:35)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:35 (mmap rep.: x:52, y:35)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:33 (mmap rep.: x:54, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:34 (mmap rep.: x:54, y:34)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:35 (mmap rep.: x:54, y:35)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:34 (mmap rep.: x:55, y:34)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:35 (mmap rep.: x:55, y:35)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:33 (mmap rep.: x:55, y:33)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:33 (mmap rep.: x:56, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:34 (mmap rep.: x:56, y:34)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:32 (mmap rep.: x:55, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:32 (mmap rep.: x:54, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:32 (mmap rep.: x:56, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:31 (mmap rep.: x:55, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:31 (mmap rep.: x:56, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:34 (mmap rep.: x:49, y:34)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:35 (mmap rep.: x:51, y:35)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:35 (mmap rep.: x:50, y:35)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:34 (mmap rep.: x:52, y:34)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:35 (mmap rep.: x:49, y:35)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:36 (mmap rep.: x:50, y:36)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:36 (mmap rep.: x:51, y:36)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:36 (mmap rep.: x:49, y:36)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:35 (mmap rep.: x:48, y:35)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:36 (mmap rep.: x:48, y:36)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:37 (mmap rep.: x:49, y:37)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:37 (mmap rep.: x:48, y:37)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:36 (mmap rep.: x:47, y:36)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:37 (mmap rep.: x:47, y:37)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:37 (mmap rep.: x:50, y:37)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:37 (mmap rep.: x:51, y:37)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:38 (mmap rep.: x:50, y:38)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:38 (mmap rep.: x:49, y:38)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:39 (mmap rep.: x:50, y:39)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:39 (mmap rep.: x:49, y:39)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:38 (mmap rep.: x:51, y:38)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:38 (mmap rep.: x:48, y:38)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:30 (mmap rep.: x:51, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:31 (mmap rep.: x:52, y:31)
+Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:51, y:29 (mmap rep.: x:51, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:50, y:29 (mmap rep.: x:50, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:30 (mmap rep.: x:52, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:29 (mmap rep.: x:52, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:30 (mmap rep.: x:53, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:31 (mmap rep.: x:53, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:29 (mmap rep.: x:53, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:32 (mmap rep.: x:53, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:32 (mmap rep.: x:52, y:32)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:31 (mmap rep.: x:54, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:30 (mmap rep.: x:56, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:30 (mmap rep.: x:54, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:29 (mmap rep.: x:55, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:32 (mmap rep.: x:54, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:33 (mmap rep.: x:54, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:33 (mmap rep.: x:53, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:32 (mmap rep.: x:55, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:33 (mmap rep.: x:55, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:31 (mmap rep.: x:55, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:31 (mmap rep.: x:56, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:32 (mmap rep.: x:56, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:33 (mmap rep.: x:56, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:30 (mmap rep.: x:56, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:29 (mmap rep.: x:56, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:29 (mmap rep.: x:55, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:28 (mmap rep.: x:56, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:28 (mmap rep.: x:55, y:28)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:29 (mmap rep.: x:54, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:28 (mmap rep.: x:54, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:27 (mmap rep.: x:56, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:27 (mmap rep.: x:55, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:27 (mmap rep.: x:54, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:26 (mmap rep.: x:56, y:26)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:26 (mmap rep.: x:55, y:26)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:26 (mmap rep.: x:54, y:26)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:25 (mmap rep.: x:56, y:25)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:25 (mmap rep.: x:55, y:25)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:27 (mmap rep.: x:53, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:53, y:28 (mmap rep.: x:53, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:52, y:28 (mmap rep.: x:52, y:28)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:29 (mmap rep.: x:57, y:29)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:30 (mmap rep.: x:57, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:31 (mmap rep.: x:57, y:31)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:29 (mmap rep.: x:58, y:29)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:31 (mmap rep.: x:58, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:32 (mmap rep.: x:57, y:32)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:59, y:29 (mmap rep.: x:59, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:59, y:30 (mmap rep.: x:59, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:59, y:31 (mmap rep.: x:59, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:60, y:30 (mmap rep.: x:60, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:60, y:31 (mmap rep.: x:60, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:60, y:29 (mmap rep.: x:60, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:61, y:30 (mmap rep.: x:61, y:30)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:61, y:31 (mmap rep.: x:61, y:31)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:60, y:28 (mmap rep.: x:60, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:59, y:28 (mmap rep.: x:59, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:28 (mmap rep.: x:58, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:59, y:27 (mmap rep.: x:59, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:27 (mmap rep.: x:58, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:27 (mmap rep.: x:57, y:27)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:28 (mmap rep.: x:57, y:28)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:26 (mmap rep.: x:58, y:26)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:59, y:26 (mmap rep.: x:59, y:26)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:26 (mmap rep.: x:57, y:26)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:25 (mmap rep.: x:58, y:25)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:25 (mmap rep.: x:57, y:25)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:24 (mmap rep.: x:57, y:24)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:24 (mmap rep.: x:56, y:24)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:24 (mmap rep.: x:58, y:24)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:23 (mmap rep.: x:57, y:23)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:23 (mmap rep.: x:56, y:23)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:24 (mmap rep.: x:55, y:24)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:23 (mmap rep.: x:55, y:23)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:22 (mmap rep.: x:56, y:22)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:22 (mmap rep.: x:55, y:22)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:57, y:22 (mmap rep.: x:57, y:22)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:56, y:21 (mmap rep.: x:56, y:21)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:21 (mmap rep.: x:55, y:21)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:22 (mmap rep.: x:54, y:22)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:54, y:21 (mmap rep.: x:54, y:21)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
+Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
+Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:30 (mmap rep.: x:49, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Released script module "scripts_tswow_xmymo.dll" ("xmymo")...
->> Loaded script module "scripts_tswow_xmymo.dll" ("xmymo" - cbc8b56).
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:31 (mmap rep.: x:48, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:29 (mmap rep.: x:49, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:49, y:31 (mmap rep.: x:49, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:30 (mmap rep.: x:47, y:30)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:31 (mmap rep.: x:47, y:31)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:31 (mmap rep.: x:32, y:31)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:31 (mmap rep.: x:31, y:31)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:32, y:32 (mmap rep.: x:32, y:32)
 Could not load MMAP name:Eastern Kingdoms, id:0, x:31, y:32 (mmap rep.: x:31, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
 Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
 Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
 Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
 Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
+Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:29 (mmap rep.: x:47, y:29)
+Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
 Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:28, y:30 (mmap rep.: x:28, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:48, y:29 (mmap rep.: x:48, y:29)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:29 (mmap rep.: x:20, y:29)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:47, y:28 (mmap rep.: x:47, y:28)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Northrend, id:571, x:32, y:42 (mmap rep.: x:32, y:42)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:41 (mmap rep.: x:29, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:39, y:32 (mmap rep.: x:39, y:32)
-Could not load MMAP name:Kalimdor, id:1, x:34, y:39 (mmap rep.: x:34, y:39)
-Could not load MMAP name:Northrend, id:571, x:27, y:23 (mmap rep.: x:27, y:23)
-Could not load MMAP name:Northrend, id:571, x:28, y:43 (mmap rep.: x:28, y:43)
-Could not load MMAP name:Kalimdor, id:1, x:29, y:39 (mmap rep.: x:29, y:39)
-Could not load MMAP name:Kalimdor, id:1, x:39, y:41 (mmap rep.: x:39, y:41)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:58, y:30 (mmap rep.: x:58, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:27, y:30 (mmap rep.: x:27, y:30)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:55, y:30 (mmap rep.: x:55, y:30)
-Could not load MMAP name:Kalimdor, id:1, x:20, y:30 (mmap rep.: x:20, y:30)
-Could not load MMAP name:Northrend, id:571, x:27, y:19 (mmap rep.: x:27, y:19)
-Could not load MMAP name:Outland, id:530, x:39, y:52 (mmap rep.: x:39, y:52)
-Could not load MMAP name:Eastern Kingdoms, id:0, x:38, y:33 (mmap rep.: x:38, y:33)

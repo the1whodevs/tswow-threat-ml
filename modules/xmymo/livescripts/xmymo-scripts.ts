@@ -179,6 +179,39 @@ class ML_Data
         return dump;
     }
 
+    public GetLastEntryStringWithoutThreat():string
+    {
+        let dump = "";
+        let entry = this.GetLastEntry();
+
+        dump += entry.class_id + "," +
+            entry.dmg_dealt + "," +
+            entry.stat_3 + "," +
+            entry.stat_4 + "," +
+            entry.stat_5 + "," +
+            entry.stat_6 + "," +
+            entry.stat_7 + "," +
+            entry.stat_12 + "," +
+            entry.stat_13 + "," +
+            entry.stat_14 + "," +
+            entry.stat_15 + "," +
+            entry.stat_31 + "," +
+            entry.stat_32 + "," +
+            entry.stat_33 + "," +
+            entry.stat_34 + "," +
+            entry.stat_38 + "," +
+            entry.stat_39 + "," +
+            entry.stat_41 + "," +
+            entry.stat_42 + "," +
+            entry.stat_44 + "," +
+            entry.stat_45 + "," +
+            entry.stat_46 + "," +
+            entry.stat_47 + "," +
+            entry.stat_48;
+
+        return dump;
+    }
+
     public GetStringWithoutThreat():string
     {
         let dump = ""
@@ -352,6 +385,17 @@ function GearAndTalentUp(player:TSPlayer, specId:uint32)
     GearUp(player, specId);
 }
 
+function HandleDmgToBoss(attacker:TSUnit, target:TSUnit, dmg:number)
+{
+    data.AddEntry(attacker.ToPlayer(), dmg);
+
+    var threat = ToInt32(SyncHttpGet("localhost:5555/"+data.GetLastEntryStringWithoutThreat()));
+
+    attacker.ToPlayer().Say("DEALT ["+dmg+"] AND RECEIVED ["+threat+"] back!", 0);
+
+    target.AddThreat(attacker.ToPlayer(), threat, 0, 0, false, false, true);
+}
+
 // Register your events here!
 export function Main(events: TSEventHandlers) 
 {    
@@ -411,32 +455,22 @@ export function Main(events: TSEventHandlers)
 
     events.Formula.OnMeleeDamageEarly((dmgInfo, typeId, id, dmg) =>
         {
-            if (dmg.get() == 0) return;
+            if (dmg.get() <= 0) return;
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
-            dmgInfo.GetTarget().AddThreat(
-                dmgInfo.GetAttacker().ToPlayer(), 
-                dmg.get(), 0, 0, false, false, true);
-
-            // data.GetStringWithoutThreat().split(',')
+            HandleDmgToBoss(dmgInfo.GetAttacker(), dmgInfo.GetTarget(), dmg.get());
         })
         
     
     events.Formula.OnSpellDamageEarly((dmgInfo, spell, typeId, isCrit, dmg) =>
         {
-            if (dmg.get() == 0) return;
+            if (dmg.get() <= 0) return;
             if (!dmgInfo.GetAttacker().IsPlayer()) return;
 
             if (!IsBoss(dmgInfo.GetTarget().ToCreature().GetEntry())) return;
 
-            // dmgInfo.GetAttacker().ToPlayer().SendUnitSay("(OSDE) Adding entry with threat : " + dmg.get(), 0);
-
-            data.AddEntry(dmgInfo.GetAttacker().ToPlayer(), dmg.get());
-            dmgInfo.GetTarget().AddThreat(
-                dmgInfo.GetAttacker().ToPlayer(), 
-                dmg.get(), 0, 0, false, false, true);
+            HandleDmgToBoss(dmgInfo.GetAttacker(), dmgInfo.GetTarget(), dmg.get());
         })
 
 
