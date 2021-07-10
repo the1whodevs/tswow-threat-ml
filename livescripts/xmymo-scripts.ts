@@ -1,7 +1,6 @@
 import { eventNames, stderr } from "process";
 
 const COMMAND_PREFIX = "-";
-const GEARUP_COMMAND = COMMAND_PREFIX + "gearup";
 
 class TeleportData 
 {
@@ -238,12 +237,70 @@ function IsBoss(id:int):bool
     return id == BOSS_ID;
 }
 
-function AddItem(player:TSPlayer, id:int, slot:int, equip:boolean)
+/*
+This should only be used for bags OnLogin ideally.
+*/
+function ForceAddItem(player:TSPlayer, id:int, slot:int)
 {
     var item = player.AddItem(id, 1);
+    player.EquipItem(item, slot, id);
+}
+
+function AddItem(player:TSPlayer, id:int, slot:int, equip:boolean)
+{
+    let fingerSlots = [ 10 , 11];
+    let trinketSlots = [ 12, 13 ];
+
+    var isFinger = false;
+    var isTrinket = false;
+    var otherFingerTrinketSlot = -1;
+
+    if (slot == fingerSlots[0]){
+        otherFingerTrinketSlot = fingerSlots[1];
+        isFinger = true;
+    }
+    else if (slot == fingerSlots[1]){
+        otherFingerTrinketSlot = fingerSlots[0];
+        isFinger = true;
+    }
+    else if (slot == trinketSlots[0]){
+        otherFingerTrinketSlot = trinketSlots[1];
+        isTrinket = true;
+    }
+    else if (slot == trinketSlots[1]){
+        otherFingerTrinketSlot = trinketSlots[0];
+        isTrinket = true;
+    }
+
+    var item = player.AddItem(id, 1);
+
+    // This is true either when that item is already equipped or when the item ID is invalid.
+    if (item.IsNull()){
+
+        // Item is finger or trinket and already equipped on one of the 2 available slots.
+        if ((isFinger || isTrinket) && (player.GetEquippedItemBySlot(slot).GetEntry() == id || player.GetEquippedItemBySlot(otherFingerTrinketSlot).GetEntry() == id)) return;
+
+        // Item is not finger or trinket and is already equipped!
+        if (player.GetEquippedItemBySlot(slot).GetEntry() == id) return;
+
+        player.Say("Item ID:["+id+"] is null and NOT equipped on the same slot!", 0);
+        return;
+    }
 
     if (equip) 
     {
+        if (!player.CanEquipItem(item, slot, item.GetEntry()))
+        {
+            let remove = player.GetEquippedItemBySlot(slot)
+
+            if (remove.IsNull()){
+                player.Say("I can't equip ["+item.GetName()+"] but not because something else is equipped there!", 0);
+                return;
+            }
+
+            player.RemoveItem(remove, remove.GetCount(), remove.GetEntry())
+        }
+        
         player.EquipItem(item, slot, id);
     }   
 }
@@ -265,6 +322,8 @@ function TalentUp(player:TSPlayer, specId:uint32)
             player.LearnTalent(ToUInt32(pair[0]), ToUInt32(pair[1]));
         }
     );
+
+    player.LearnClassSpells(true, true);
 }
 
 function GearUp(player:TSPlayer, specId:uint32)
@@ -286,7 +345,10 @@ function GearUp(player:TSPlayer, specId:uint32)
 
 function GearAndTalentUp(player:TSPlayer, specId:uint32)
 {
-    TalentUp(player, specId);
+    // Druid Feral Tank!
+    if (specId == 4) TalentUp(player, 2);
+    else TalentUp(player, specId);
+
     GearUp(player, specId);
 }
 
@@ -310,9 +372,9 @@ export function Main(events: TSEventHandlers)
             player.AdvanceSkillsToMax();
             player.ModifyMoney(10000000000);
 
-            AddItem(player, 51809, 20, true);
-            AddItem(player, 51809, 21, true);
-            AddItem(player, 51809, 22, true);
+            ForceAddItem(player, 51809, 20);
+            ForceAddItem(player, 51809, 21);
+            ForceAddItem(player, 51809, 22);
 
             if (player.IsAlliance())
             {
@@ -417,8 +479,11 @@ export function Main(events: TSEventHandlers)
     {
         var split = command.get().split(' ');
 
-        if (split[0] == "gearup" && 
-            (split[1] == "1" || split[1] == "2" || split[1] == "3"))
+        var isValid = split[0] == "gearup" && (split[1] == "1" || split[1] == "2" || split[1] == "3");
+
+        if (!isValid && player.GetClass() == 11 && split[0] == "gearup" && split[1] == "4") isValid = true;
+
+        if (isValid)
         {
             GearAndTalentUp(player, ToUInt32(split[1]));
 
