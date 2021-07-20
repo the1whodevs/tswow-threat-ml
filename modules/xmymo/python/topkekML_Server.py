@@ -2,6 +2,11 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from sklearn import tree
 import sys
 
+# 2m 40s 'cinematic' on final phase of lich king
+# 16m 30s~ fight in total (with cinematic)
+# 3m offset
+# first target time: 10m +- offset
+
 # open the data dump file
 file = open('C:\\Users\\xmymo\\Documents\\ts-wow\\coredata\\realms\\tswow\\data')
 

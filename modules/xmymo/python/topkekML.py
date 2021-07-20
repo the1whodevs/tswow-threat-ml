@@ -3,7 +3,7 @@ import sys
 
 def DoPredict(args):
     
-    return 'suck on this dick'
+    return 'it works!'
 
     # open the data dump file
     file = open('C:\\Users\\xmymo\\Documents\\ts-wow\\coredata\\realms\\tswow\\data')
