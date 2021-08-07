@@ -20,236 +20,55 @@ class TeleportData
     }
 }
 
-class ML_Entry
+class DPS_Entry
 {
-    class_id:int;
-    dmg_dealt:int;
-    stat_3:int; // extra agi from items
-    stat_4:int; // extra str from items
-    stat_5:int; // extra int from items
-    stat_6:int; // extra spi from items
-    stat_7:int; // extra sta from items
-    stat_12:int; // extra def rating from items
-    stat_13:int; // extra dodge rating from items
-    stat_14:int; // extra parry rating from items
-    stat_15:int; // extra block rating from items
-    stat_31:int; // extra hit rating from items
-    stat_32:int; // extra crit rating from items
-    stat_33:int; // extra hit taken from items
-    stat_34:int; // extra crit taken from items
-    stat_38:int; // extra attack power from items
-    stat_39:int; // extra ranged attack power from items
-    stat_41:int; // extra spell healing done from items
-    stat_42:int; // extra spell damage done from items
-    stat_44:int; // extra armor penetration rating from items
-    stat_45:int; // extra spell power from items
-    stat_46:int; // extra health regen from items
-    stat_47:int; // extra spell penetration from items
-    stat_48:int; // extra block value from items
-    threat:int; // (1 dmg = 1 threat)
+    player:uint32;
+    dmg:uint32;
 
-    constructor(class_id:int,
-        dmg_dealt:int,
-        stat_3:int,
-        stat_4:int,
-        stat_5:int,
-        stat_6:int,
-        stat_7:int,
-        stat_12:int,
-        stat_13:int,
-        stat_14:int,
-        stat_15:int,
-        stat_31:int,
-        stat_32:int,
-        stat_33:int,
-        stat_34:int,
-        stat_38:int,
-        stat_39:int,
-        stat_41:int,
-        stat_42:int,
-        stat_44:int,
-        stat_45:int,
-        stat_46:int,
-        stat_47:int,
-        stat_48:int,
-        threat:int)
+    constructor(player:uint32,
+        dmg:uint32)
     {
-        this.class_id  = class_id;
-        this.dmg_dealt = dmg_dealt;
-        this.stat_3 = stat_3;
-        this.stat_4 = stat_4;
-        this.stat_5 = stat_5;
-        this.stat_6 = stat_6;
-        this.stat_7 = stat_7;
-        this.stat_12 = stat_12;
-        this.stat_13 = stat_13;
-        this.stat_14 = stat_14;
-        this.stat_15 = stat_15;
-        this.stat_31 = stat_31;
-        this.stat_32 = stat_32;
-        this.stat_33 = stat_33;
-        this.stat_34 = stat_34;
-        this.stat_38 = stat_38;
-        this.stat_39 = stat_39;
-        this.stat_41 = stat_41;
-        this.stat_42 = stat_42;
-        this.stat_44 = stat_44;
-        this.stat_45 = stat_45;
-        this.stat_46 = stat_46;
-        this.stat_47 = stat_47;
-        this.stat_48 = stat_48;
-        this.threat = threat;
+        this.player = player;
+        this.dmg = dmg;
     }
 }
 
 class ML_Data
 {
-    entries:TSArray<ML_Entry> = [];
+    entries:TSArray<DPS_Entry> = [];
 
     public ResetEntries()
     {
-        this.entries = <TSArray<ML_Entry>> [];    
+        this.entries = <TSArray<DPS_Entry>> [];    
     }
 
-    public AddEntry(player:TSPlayer, dmg:number) 
+    public AddEntry(player:uint32, dmg:uint32) 
     {
-        this.entries.push(
-            new ML_Entry(
-                player.GetClass(),
-                dmg,
-                player.GetStat(3),
-                player.GetStat(4),
-                player.GetStat(5),
-                player.GetStat(6),
-                player.GetStat(7),
-                player.GetStat(12),
-                player.GetStat(13),
-                player.GetStat(14),
-                player.GetStat(15),
-                player.GetStat(31),
-                player.GetStat(32),
-                player.GetStat(33),
-                player.GetStat(34),
-                player.GetStat(38),
-                player.GetStat(39),
-                player.GetStat(41),
-                player.GetStat(42),
-                player.GetStat(44),
-                player.GetStat(45),
-                player.GetStat(46),
-                player.GetStat(47),
-                player.GetStat(48),
-                dmg
-                ));
+        this.entries.push(new DPS_Entry(player, dmg));
     }
 
-    public GetString():string
-    {
-        let dump = ""
-
-        for (let entry of this.entries)
-        {
-            dump += entry.class_id + "," +
-            entry.dmg_dealt + "," +
-            entry.stat_3 + "," +
-            entry.stat_4 + "," +
-            entry.stat_5 + "," +
-            entry.stat_6 + "," +
-            entry.stat_7 + "," +
-            entry.stat_12 + "," +
-            entry.stat_13 + "," +
-            entry.stat_14 + "," +
-            entry.stat_15 + "," +
-            entry.stat_31 + "," +
-            entry.stat_32 + "," +
-            entry.stat_33 + "," +
-            entry.stat_34 + "," +
-            entry.stat_38 + "," +
-            entry.stat_39 + "," +
-            entry.stat_41 + "," +
-            entry.stat_42 + "," +
-            entry.stat_44 + "," +
-            entry.stat_45 + "," +
-            entry.stat_46 + "," +
-            entry.stat_47 + "," +
-            entry.stat_48 + "," +
-            entry.threat + ";"
-        }
-
-        return dump;
-    }
-
-    public GetLastEntryStringWithoutThreat():string
-    {
-        let dump = "";
-        let entry = this.GetLastEntry();
-
-        dump += entry.class_id + "," +
-            entry.dmg_dealt + "," +
-            entry.stat_3 + "," +
-            entry.stat_4 + "," +
-            entry.stat_5 + "," +
-            entry.stat_6 + "," +
-            entry.stat_7 + "," +
-            entry.stat_12 + "," +
-            entry.stat_13 + "," +
-            entry.stat_14 + "," +
-            entry.stat_15 + "," +
-            entry.stat_31 + "," +
-            entry.stat_32 + "," +
-            entry.stat_33 + "," +
-            entry.stat_34 + "," +
-            entry.stat_38 + "," +
-            entry.stat_39 + "," +
-            entry.stat_41 + "," +
-            entry.stat_42 + "," +
-            entry.stat_44 + "," +
-            entry.stat_45 + "," +
-            entry.stat_46 + "," +
-            entry.stat_47 + "," +
-            entry.stat_48;
-
-        return dump;
-    }
-
-    public GetStringWithoutThreat():string
-    {
-        let dump = ""
-
-        for (let entry of this.entries)
-        {
-            dump += entry.class_id + "," +
-            entry.dmg_dealt + "," +
-            entry.stat_3 + "," +
-            entry.stat_4 + "," +
-            entry.stat_5 + "," +
-            entry.stat_6 + "," +
-            entry.stat_7 + "," +
-            entry.stat_12 + "," +
-            entry.stat_13 + "," +
-            entry.stat_14 + "," +
-            entry.stat_15 + "," +
-            entry.stat_31 + "," +
-            entry.stat_32 + "," +
-            entry.stat_33 + "," +
-            entry.stat_34 + "," +
-            entry.stat_38 + "," +
-            entry.stat_39 + "," +
-            entry.stat_41 + "," +
-            entry.stat_42 + "," +
-            entry.stat_44 + "," +
-            entry.stat_45 + "," +
-            entry.stat_46 + "," +
-            entry.stat_47 + "," +
-            entry.stat_48;
-        }
-
-        return dump;
-    }
-
-    public GetLastEntry():ML_Entry
+    public GetLastEntry():DPS_Entry
     {
         return this.entries.get(this.entries.length-1);
+    }
+
+    public GetDPS(player:uint32):uint32{
+
+        let dmg:uint32 = 0;
+        let entryCount:uint32 = 0;
+
+        this.entries.forEach(dps_entry => {
+            if (dps_entry.player == player){
+                entryCount++;
+                dmg += dps_entry.dmg;
+            }
+        });
+
+        if (entryCount == 0){
+            entryCount = 1;
+        }
+
+        return dmg/entryCount;
     }
 }
 
@@ -387,13 +206,51 @@ function GearAndTalentUp(player:TSPlayer, specId:uint32)
 
 function HandleDmgToBoss(attacker:TSUnit, target:TSUnit, dmg:number)
 {
-    data.AddEntry(attacker.ToPlayer(), dmg);
+    data.AddEntry(attacker.ToPlayer().GetGUID(), dmg);
 
-    var threat = ToInt32(SyncHttpGet("localhost:5555/"+data.GetLastEntryStringWithoutThreat()));
+    let party:TSArray<TSPlayer> = attacker.ToPlayer().GetMap().GetPlayers(2);
+    let msgArgs:String = "";
 
-    attacker.ToPlayer().Say("DEALT ["+dmg+"] AND RECEIVED ["+threat+"] back!", 0);
+    for (var i = 0; i < party.length; i++)
+    {
+        let player:TSPlayer = party.get(i);
+        
+        let dps:uint32 = data.GetDPS(player.GetGUID());
 
-    target.AddThreat(attacker.ToPlayer(), threat, 0, 0, false, false, true);
+        if (dps >= 3000) {
+            dps = 2999;
+        }
+
+        let runSpeed:uint32 = player.GetSpeed(1);
+
+        if (runSpeed < 0) runSpeed = 0;
+        if (runSpeed >= 10) runSpeed = 9;
+
+        let maxHP:uint32 = player.GetMaxHealth();
+
+        if (maxHP > 29999){
+            maxHP = maxHP = 29999
+        }
+
+        msgArgs += dps + ",";
+        msgArgs += runSpeed + ",";
+        msgArgs += maxHP + "";
+
+        // Only add a semicolon if another player will be added
+        if (i < party.length - 1) msgArgs += ";";
+    }
+    
+    var targetId = ToInt32(SyncHttpGet("localhost:5555/"+msgArgs));
+
+    attacker.ToPlayer().Say("BOSS WANTS " + targetId, 0);
+
+    if (party.length >= targetId){
+        targetId = party.length - 1;
+    }
+
+    let targetPlayer:TSUnit = party.get(targetId);
+
+    target.AddThreat(targetPlayer, 25000, 0, 0, false, false, true);
 }
 
 // Register your events here!
@@ -474,12 +331,12 @@ export function Main(events: TSEventHandlers)
         })
 
 
-    // Fires when the given npc id dies.
-    events.CreatureID.OnDeath(BOSS_ID, (creature, killer) => 
-        {
-            killer.SendUnitSay("Killed the boss, dumping data...", 0);
-            WriteFile("data", data.GetString());
-        })
+    // // Fires when the given npc id dies.
+    // events.CreatureID.OnDeath(BOSS_ID, (creature, killer) => 
+    //     {
+    //         killer.SendUnitSay("Killed the boss, dumping data...", 0);
+    //         WriteFile("data", data.GetString());
+    //     })
 
     // Owner is the mob, target is the player.
     events.Formula.OnAddThreatEarly((owner, target, spell, isRaw, value)=>

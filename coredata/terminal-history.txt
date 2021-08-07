@@ -15,7 +15,6 @@ realm send tswow create
 build all
 check
 build data
-realm stop
 realm status
 reload config
 .reload config
@@ -23,3 +22,4 @@ realm send tswow reload config
 build all --allow-globals --trace
 realm start
 build livescripts --allow-globals --trace
+realm stop

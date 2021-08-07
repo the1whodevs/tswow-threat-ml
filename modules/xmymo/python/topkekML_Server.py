@@ -1,98 +1,136 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from sklearn import tree
+# Import Gym & Stuff
+import gym
+from gym import Env
+from gym.spaces import Discrete, MultiDiscrete, Dict
+
+# Import helpers
+import numpy as np
+import random
+import os
+
 import sys
 
-# 2m 40s 'cinematic' on final phase of lich king
-# 16m 30s~ fight in total (with cinematic)
-# 3m offset
-# first target time: 10m +- offset
+# Import Stable baselines & stuff
+from stable_baselines3 import PPO
+from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.evaluation import evaluate_policy
 
-# open the data dump file
-file = open('C:\\Users\\xmymo\\Documents\\ts-wow\\coredata\\realms\\tswow\\data')
-
-# split using the separator
-rawdata = file.read().split(';')
-
-file.close()
-
-labels = []
-arr = []
-
-def RepresentsNum(s):
-    return s.isnumeric()
+class BattleEnv(Env):
+    def __init__(self):
+        self.action_space = Discrete(10) # id to attack
+        self.observation_space = Dict({'0':MultiDiscrete([3000, 10, 30000]),
+                                       '1':MultiDiscrete([3000, 10, 30000]),
+                                       '2':MultiDiscrete([3000, 10, 30000]),
+                                       '3':MultiDiscrete([3000, 10, 30000]),
+                                       '4':MultiDiscrete([3000, 10, 30000]),
+                                       '5':MultiDiscrete([3000, 10, 30000]),
+                                       '6':MultiDiscrete([3000, 10, 30000]),
+                                       '7':MultiDiscrete([3000, 10, 30000]),
+                                       '8':MultiDiscrete([3000, 10, 30000]),
+                                       '9':MultiDiscrete([3000, 10, 30000])})
+        
+        self.state = {'0':np.array([random.randint(1500, 2999),random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '1':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '2':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '3':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '4':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '5':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '6':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '7':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '8':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '9':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)])}
+        self.dps = 4500
+        self.timer = 360
+        pass
     
-# find the threat (last number in line) and add it as a label
-for entry in rawdata:
-    label = entry[1+entry.rfind(','):]
-
-    if RepresentsNum(label):
-        labels.append(int(label))
-    else:
-        rawdata.remove(entry)
-
-data = []
-
-# find the threat again but remove it from the string
-for entry in rawdata:
-    # "firstpart,secondpart,threat" becomes "firstpart,secondpart"
-    # then appended into the data list
-    index = entry.rfind(',')
-    data.append(entry[:index])
-
-features = []
-
-for entry in data:
-    split = entry.split(',')
-    newentry = []
-    for sub in split:
-        newentry.append(int(sub))
-    features.append(newentry)
-
-# print(data)
-# print(rawdata)
-# print(labels)
-# print(features)
-
-# Features
-# Class ID	Dmg Dealt	Stat 3	Stat 4	Stat 5	Stat 6	Stat 7	Stat 12	Stat 13	Stat 14	Stat 15	Stat 31	Stat 32	Stat 33	Stat 34	Stat 38	Stat 39	Stat 41
-#	Stat 42	Stat 44	Stat 45	Stat 46	Stat 47	Stat 48
-
-# Labels
-# Threat
-
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(features, labels)
-
-def DoPredict(myArgs):
-    arr = myArgs
-    print(len(arr))
-    classId = int(arr[0]);
-    dmgDealt = int(arr[1]);
-    stat3 = int(arr[2]);
-    stat4 = int(arr[3]);
-    stat5 = int(arr[4]);
-    stat6 = int(arr[5]);
-    stat7 = int(arr[6]);
-    stat12 = int(arr[7]);
-    stat13 = int(arr[8]);
-    stat14 = int(arr[9]);
-    stat15 = int(arr[10]);
-    stat31 = int(arr[11]);
-    stat32 = int(arr[12]);
-    stat33 = int(arr[13]);
-    stat34 = int(arr[14]);
-    stat38 = int(arr[15]);
-    stat39 = int(arr[16]);
-    stat41 = int(arr[17]);
-    stat42 = int(arr[18]);
-    stat44 = int(arr[19]);
-    stat45 = int(arr[20]);
-    stat46 = int(arr[21]);
-    stat47 = int(arr[22]);
-    stat48 = int(arr[23]);
+    def step(self, action):
+        
+        # action is target id
+        target_key = str(action)
+        target = self.state[target_key]
+        
+        reward = 0
+        
+        # Give reward if the boss selected an alive player
+        if target[3] <= 0:
+            reward -= 1
+        else:
+            reward += 1
+           
+        # Give reward if the boss selected the slowest player
+        slowest = '0'
+        
+        for key in self.state:
+            if self.state[slowest][1] > self.state[key][1]:
+                slowest = key
+                
+        if target_key == slowest:
+            reward += 2
+        else:
+            reward -= 2
+        
+        # Prioritize melee players
+        if target[2] == 1:
+            reward -= 1
+        else:
+            reward += 1
+            
+        # Prioritze highest dps
+        highest_dps = '0'
+        
+        for key in self.state:
+            if self.state[key][0] > self.state[highest_dps][0]:
+                highest_dps = key
+                
+        if target_key == key:
+            reward += 3
+        else:
+            reward -= 3
+        
+        # Randomly adjust movement of players
+        for key in self.state:
+            self.state[key][1] += random.randint(-2, 2)
+            if self.state[key][1] < 0:
+                self.state[key][1] = 0 # stunned!
+            elif self.state[key][1] > 9:
+                self.state[key][1] = 9 # super speed!
+        
+        target[3] -= self.dps
+        
+        if target[3] < 0:
+            target[3] = 0
+        
+        self.timer -= 1
+        
+        done = self.timer == 0
+        info = {}
+        self.state[target_key] = target
+        return self.state, reward, done, info
     
-    return clf.predict([[classId, dmgDealt, stat3, stat4, stat5, stat6, stat7, stat12, stat13, stat14, stat15, stat31,
-                        stat32, stat33, stat34, stat38, stat39, stat41, stat42, stat44, stat45, stat46, stat47, stat48]])
+    def render(self):
+        pass
+    
+    def reset(self):
+        self.state = {'0':np.array([random.randint(1500, 2999),random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '1':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '2':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '3':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '4':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '5':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '6':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '7':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '8':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)]),
+                      '9':np.array([random.randint(1500, 2999), random.randint(0, 9), random.randint(0, 1), random.randint(20000, 30000)])}
+        self.timer = 360
+        return self.state
+
+env = BattleEnv()
+
+save_name = 'WoW_v2_CUDA_PPO_355K'
+save_path = os.path.join('Training', 'Saved Models', save_name)
+
+model = PPO.load(save_path, env)
 
 class MyRequestHandler(BaseHTTPRequestHandler):
 
@@ -101,8 +139,50 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         # self.path contains a '/' as a first character and then 
         # all our arguments comma separated.
-        arr = self.path[1:].split(',')
-        result = DoPredict(arr)
+        # arguments come in a 'dps,runspeed,maxhp;dps,runspeed,maxhp;dps,runspeed,maxhp;' fashion
+        players = self.path[1:].split(';')
+
+        counter = 0
+        args = {}
+
+        for player in players:
+            playerData = player.split(',')
+            
+            #print('Player : ' + player)
+            #print(playerData)
+            
+            dpsStr = playerData[0]
+            runSpeedStr = playerData[1]
+            maxHpStr = playerData[2]
+            
+            if dpsStr == '':
+                print('Player contained empty dps: ' + player)
+                continue
+            
+            if runSpeedStr == '':
+                print('Player contained empty runSpeed: ' + player)
+                continue
+            
+            if maxHpStr == '':
+                print('Player contained empty maxHp: ' + player)
+                continue
+            
+            dps = round(float(dpsStr))
+            runSpeed = round(float(runSpeedStr))
+            maxHp = round(float((maxHpStr)))
+            args[str(counter)] = np.array([dps, runSpeed, maxHp])
+            counter += 1
+            
+        if len(args) > 10:
+            args = dict(list(args.items())[:10])
+        elif len(args) < 10:
+            diff = 10 - len(args)
+            
+        for x in range(diff):
+            args[str(counter)] = np.array([0, 0, 0])
+            counter += 1
+
+        result = model.predict(args)
         self.wfile.write(bytearray(str(result[0]).encode()))
 
 
